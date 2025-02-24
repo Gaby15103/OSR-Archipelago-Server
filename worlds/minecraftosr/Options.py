@@ -91,7 +91,6 @@ class MinecraftOsrOptions(PerGameCommonOptions):
     quest_goal:QuestGoal
     shuffle_structures: ShuffleStructures
     structure_compasses: StructureCompasses
-
     combat_difficulty: CombatDifficulty
     bee_traps: BeeTraps
     send_defeated_mobs: SendDefeatedMobs

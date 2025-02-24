@@ -3,8 +3,6 @@ import json
 import pkgutil
 from operator import index
 
-from worlds.minecraft.Constants import location_id_offset, item_name_to_id, location_name_to_id, exclusion_info
-
 
 def load_data_file(*args) -> dict:
     fname = "/".join(["data", *args])
@@ -13,7 +11,7 @@ def load_data_file(*args) -> dict:
 # For historical reasons, these values are different.
 # They remain different to ensure datapackage consistency.
 # Do not separate other games' location and item IDs like this.
-item_id_offset: int     = 45000
+item_id_offset: int 	= 45000
 location_id_offset: int = 42000
 
 item_info = load_data_file("item.json")

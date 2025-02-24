@@ -18,7 +18,7 @@ def get_junk_item_names(rand, k: int) -> str:
 	)
 	return junk
 
-def buidl_item_pool(world: "MinecraftOsrWorld") -> List[Item]:
+def build_item_pool(world: "MinecraftOsrWorld") -> List[Item]:
 	multiworld = world.multiworld
 	player = world.player
 
@@ -32,7 +32,7 @@ def buidl_item_pool(world: "MinecraftOsrWorld") -> List[Item]:
 		itempool += [world.create_item(item_name) for _ in range(num)]
 
 	# Add structures compasses
-	if world.options.structure_compass:
+	if world.options.structure_compasses:
 		compasses = [name for name in world.item_name_to_id if "Structure Compass" in name]
 		for item_name in compasses:
 			itempool.append(world.create_item(item_name))

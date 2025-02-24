@@ -23,6 +23,5 @@
         ["The End Structure", "End City"]
     ],
     "illegal_connections": {
-        "Nether Fortress": ["The End Structure"]
     }
 }
