@@ -77,10 +77,57 @@ def has_thermal_machine_frame(world: "MinecraftOsrWorld", state: CollectionState
     return state.has("thermal machine frame", player) and has_soularium_ingot(world,state,player)
 
 def has_soularium_ingot(world: "MinecraftOsrWorld", state: CollectionState, player: int) -> bool:
-    return state.has("soularium_ingot", player)
+    return state.has("soularium ingot", player)
 
 def has_gear_mold(world: "MinecraftOsrWorld", state: CollectionState, player: int) -> bool:
-    return state.has("gear_mold", player)
+    return state.has("gear mold", player)
+
+def has_infusion_crystal(world: "MinecraftOsrWorld", state: CollectionState, player: int) -> bool:
+    return state.has("infusion_crystal", player)
+
+def has_master_infusion_crystal(world: "MinecraftOsrWorld", state: CollectionState, player: int) -> bool:
+    return state.has("master infusion crystal", player)
+
+def has_black_iron_ingot(world: "MinecraftOsrWorld", state: CollectionState, player: int) -> bool:
+    return state.has("black iron ingot", player)
+
+def has_basic_crafting_table(world: "MinecraftOsrWorld", state: CollectionState, player: int) -> bool:
+    return state.has("basic crafting table", player) and has_black_iron_ingot(world,state,player)
+
+def has_inferium_growth_accelerator(world: "MinecraftOsrWorld", state: CollectionState, player: int) -> bool:
+    return state.has("inferium growth accelerator", player)
+
+def has_prudentium_growth_accelerator(world: "MinecraftOsrWorld", state: CollectionState, player: int) -> bool:
+    return state.has("prudentium growth accelerator", player)
+
+def has_tertium_growth_accelerator(world: "MinecraftOsrWorld", state: CollectionState, player: int) -> bool:
+    return state.has("tertium growth accelerator", player)
+
+def has_imperium_growth_accelerator(world: "MinecraftOsrWorld", state: CollectionState, player: int) -> bool:
+    return state.has("imperium growth accelerator", player)
+
+def has_supremium_growth_accelerator(world: "MinecraftOsrWorld", state: CollectionState, player: int) -> bool:
+    return state.has("supremium growth accelerator", player)
+
+def has_electrum_ingot(world: "MinecraftOsrWorld", state: CollectionState, player: int) -> bool:
+    return state.has("electrum ingot", player)
+
+def has_end_steel_ingot(world: "MinecraftOsrWorld", state: CollectionState, player: int) -> bool:
+    return state.has("end steel ingot", player)
+
+def has_vibrant_alloy_ingot(world: "MinecraftOsrWorld", state: CollectionState, player: int) -> bool:
+    return state.has("vibrant alloy ingot", player)
+
+def has_enderium_ingot(world: "MinecraftOsrWorld", state: CollectionState, player: int) -> bool:
+    return state.has("enderium ingot", player)
+
+def has_awakned_draconium(world: "MinecraftOsrWorld", state: CollectionState, player: int) -> bool:
+    return state.has("awakned draconium", player)
+
+def has_neutronium_ingot(world: "MinecraftOsrWorld", state: CollectionState, player: int) -> bool:
+    return state.has("neutronium ingot", player)
+
+
 
 
 def get_rules_lookup(world, player: int):
@@ -167,7 +214,7 @@ def get_rules_lookup(world, player: int):
             "4140645DC360472A:Enchanter:4701868364847400746": lambda
                 state: state.can_reach_location("092E17F60451DB2F:minecraft:enchanting_table:661492540671908655")
                         and (has_dark_steel_ingot(world,state,player) or
-                             (has_soulium_ingot(world,state,player) and state.can_reach_region('The Nether', player))),
+                             (has_soulium_ingot(world,state,player) and state.can_reach_location("403922E054130670:Into the Nether:4627768438978446960"))),
 
             # Beta
             "4B2825C257986EF8:mob_grinding_utils:absorption_hopper:5415620068536512248": lambda
@@ -248,6 +295,236 @@ def get_rules_lookup(world, player: int):
                 state: state.can_reach_location("3EE16F0264052C50:Getting Started:4531024756170107984"),
             "755ABBE38C75AE31:ironchests:copper_chest:8456277836330020401": lambda
                 state: state.can_reach_location("3EE16F0264052C50:Getting Started:4531024756170107984"),
+            "29AE56F399A8006A:storagedrawers:obsidian_storage_upgrade:3003433605757665386": lambda
+                state: state.can_reach_location("418CF7FDF846BE84:storagedrawers:oak_full_drawers_1:4723422779368980100"),
+            "6C87B43D15407718:storagedrawers:iron_storage_upgrade:7820417452394706712": lambda
+                state: state.can_reach_location("29AE56F399A8006A:storagedrawers:obsidian_storage_upgrade:3003433605757665386")
+                        and has_iron_ingots(world,state,player),
+            "502368BBB9DF42A3:storagedrawers:gold_storage_upgrade:5774574302705697443": lambda
+                state: state.can_reach_location("6C87B43D15407718:storagedrawers:iron_storage_upgrade:7820417452394706712")
+                        and has_gold_ingots(world,state,player),
+            "27D0E09429A5BC58:storagedrawers:diamond_storage_upgrade:2869039889593515096": lambda
+                state: state.can_reach_location("502368BBB9DF42A3:storagedrawers:gold_storage_upgrade:5774574302705697443"),
+            "51ADDE07480D68C7:storagedrawers:emerald_storage_upgrade:5885604410898081991": lambda
+                state: state.can_reach_location("27D0E09429A5BC58:storagedrawers:diamond_storage_upgrade:2869039889593515096"),
+            "5C7DC5405B9EAA96:storagedrawers:void_upgrade:6664699903783905942": lambda
+                state: state.can_reach_location("51ADDE07480D68C7:storagedrawers:emerald_storage_upgrade:5885604410898081991"),
+            "59F498EBB5FE2C2C:storagedrawers:compacting_drawers_3:6481973901831056428": lambda
+                state: state.can_reach_location("418CF7FDF846BE84:storagedrawers:oak_full_drawers_1:4723422779368980100")
+                        and has_iron_ingots(world,state,player),
+            "4A224F9E3C15B5C8:storagedrawers:controller:5341919649046312392": lambda
+                state: state.can_reach_location("59F498EBB5FE2C2C:storagedrawers:compacting_drawers_3:6481973901831056428")
+                        and has_redstone_alloy_ingots(world,state,player),
+            "3D181D1398577D0E:storagedrawers:controller_slave:4402300605752114446": lambda
+                state: state.can_reach_location("4A224F9E3C15B5C8:storagedrawers:controller:5341919649046312392")
+                        and has_gold_ingots(world,state,player),
+            "2249AFBFF8152AC5:storagedrawers:drawer_key:2470699109625178821": lambda
+                state: state.can_reach_location("418CF7FDF846BE84:storagedrawers:oak_full_drawers_1:4723422779368980100")
+                        and has_gold_ingots(world,state,player),
+            "769DBFCAAF546990:storagedrawers:quantify_key:8547198545064913296": lambda
+                state: state.can_reach_location("2249AFBFF8152AC5:storagedrawers:drawer_key:2470699109625178821"),
+            "24226A5DB7C6CC00:storagedrawers:shroud_key:2603760485321329664": lambda
+                state: state.can_reach_location("769DBFCAAF546990:storagedrawers:quantify_key:8547198545064913296"),
+            "16B57C4BD4C33843:storagedrawers:oak_full_drawers_2:1636350704752998467": lambda
+                state: state.can_reach_location("418CF7FDF846BE84:storagedrawers:oak_full_drawers_1:4723422779368980100"),
+            "6042D5F44B5F0A5F:storagedrawers:oak_full_drawers_4:6936341621317241439": lambda
+                state: state.can_reach_location("16B57C4BD4C33843:storagedrawers:oak_full_drawers_2:1636350704752998467"),
+            "0D6E9FD75AE47D03:storagedrawers:oak_half_drawers_1:967886717222944003": lambda
+                state: state.can_reach_location("6042D5F44B5F0A5F:storagedrawers:oak_full_drawers_4:6936341621317241439"),
+            "5EFC686F406A2689:storagedrawers:oak_half_drawers_2:6844460360727668361": lambda
+                state: state.can_reach_location("0D6E9FD75AE47D03:storagedrawers:oak_half_drawers_1:967886717222944003"),
+            "7C7DD6CC1A5E66F4:storagedrawers:oak_half_drawers_4:8970562204895962868": lambda
+                state: state.can_reach_location("5EFC686F406A2689:storagedrawers:oak_half_drawers_2:6844460360727668361"),
+            "561A5FF8F7E1F164:ironchests:iron_chest:6204376959571587428": lambda
+                state: state.can_reach_location("755ABBE38C75AE31:ironchests:copper_chest:8456277836330020401")
+                        and has_iron_ingots(world,state,player),
+            "41D57481AD08B1C4:ironchests:gold_chest:4743825882807316932": lambda
+                state: state.can_reach_location("561A5FF8F7E1F164:ironchests:iron_chest:6204376959571587428")
+                        and has_gold_ingots(world,state,player),
+            "69021BE4507E3022:ironchests:diamond_chest:7566640991352795170": lambda
+                state: state.can_reach_location("41D57481AD08B1C4:ironchests:gold_chest:4743825882807316932"),
+            "2297686A02AF6553:ironchests:obsidian_chest:2492575723293730131": lambda
+                state: state.can_reach_location("69021BE4507E3022:ironchests:diamond_chest:7566640991352795170"),
+            "345C7F6955DCBF95:ironchests:netherite_chest:3773030678218456981": lambda
+                state: state.can_reach_location("2297686A02AF6553:ironchests:obsidian_chest:2492575723293730131")
+                        and has_netherite_ingots(world,state,player),
+
+            # Delta
+            "17DCD0325F76FF0C:mysticalagriculture:inferium_essence:1719478072517263116": lambda
+                state: state.can_reach_location("3EE16F0264052C50:Getting Started:4531024756170107984"),
+            "1FB5B6707BBFB0CC:mysticalagriculture: prudentium_essence:2284932980189147340": lambda
+                state: state.can_reach_location("17DCD0325F76FF0C:mysticalagriculture:inferium_essence:1719478072517263116")
+                        and state.can_reach_location("00C14C1B77ACFCD2:mysticalagriculture:infusion_crystal:54408351360810194"),
+            "6B1A8D1CE3D65BA0:mysticalagriculture:tertium_essence:7717636066673843104": lambda
+                state: state.can_reach_location("1FB5B6707BBFB0CC:mysticalagriculture: prudentium_essence:2284932980189147340"),
+            "1111A4212E59B734:mysticalagriculture:imperium_essence:1229944635667363636": lambda
+                state: state.can_reach_location("6B1A8D1CE3D65BA0:mysticalagriculture:tertium_essence:7717636066673843104"),
+            "4DCF187529D58214:mysticalagriculture:supremium_essence:5606726952591655444": lambda
+                state: state.can_reach_location("1111A4212E59B734:mysticalagriculture:imperium_essence:1229944635667363636"),
+            "29A2B58D200D65F9:mysticalagriculture:awakened_supremium_essence:3000159919514936825": lambda
+                state: state.can_reach_location("4DCF187529D58214:mysticalagriculture:supremium_essence:5606726952591655444")
+                        and has_gold_ingots(world,state,player) and state.can_reach_location("403922E054130670:Into the Nether:4627768438978446960")
+                        and state.can_reach_location("574E54FFCA5C2F39:extendedcrafting:basic_table:6291059187071594297")
+                        and state.can_reach_location("4140645DC360472A:Enchanter:4701868364847400746")
+                        and state.can_reach_location("29E40CD5EF7495FB:mysticalagriculture:nether_star_seeds:3018551763230037499"),
+            "60665C65C798C959:mysticalagradditions:insanium_essence:6946341067475700057": lambda
+                state: state.can_reach_location("4DCF187529D58214:mysticalagriculture:supremium_essence:5606726952591655444"),
+            "27E92F9CAD2E8201:mysticalagriculture:inferium_furnace:2875882187019682305": lambda
+                state: state.can_reach_location("17DCD0325F76FF0C:mysticalagriculture:inferium_essence:1719478072517263116"),
+            "29631AAEB3EE862C:mysticalagriculture:prudentium_furnace:2982256715894785580": lambda
+                state: state.can_reach_location("27E92F9CAD2E8201:mysticalagriculture:inferium_furnace:2875882187019682305")
+                        and state.can_reach_location("1FB5B6707BBFB0CC:mysticalagriculture: prudentium_essence:2284932980189147340"),
+            "73E0BFE574AB4221:mysticalagriculture:tertium_furnace:8349884701370696225": lambda
+                state: state.can_reach_location("29631AAEB3EE862C:mysticalagriculture:prudentium_furnace:2982256715894785580")
+                        and state.can_reach_location("6B1A8D1CE3D65BA0:mysticalagriculture:tertium_essence:7717636066673843104"),
+            "0FE358C58400C6A0:mysticalagriculture:imperium_furnace:1144856335628682912": lambda
+                state: state.can_reach_location("73E0BFE574AB4221:mysticalagriculture:tertium_furnace:8349884701370696225")
+                        and state.can_reach_location("1111A4212E59B734:mysticalagriculture:imperium_essence:1229944635667363636"),
+            "3FEBBF71D957867B:mysticalagriculture:supremium_furnace:4605985539615065723": lambda
+                state: state.can_reach_location("0FE358C58400C6A0:mysticalagriculture:imperium_furnace:1144856335628682912")
+                        and state.can_reach_location("4DCF187529D58214:mysticalagriculture:supremium_essence:5606726952591655444"),
+            "0F7268F1692BA6DD:mysticalagriculture:awakened_supremium_furnace:1113067443974809309": lambda
+                state: state.can_reach_location("3FEBBF71D957867B:mysticalagriculture:supremium_furnace:4605985539615065723")
+                        and state.can_reach_location("29A2B58D200D65F9:mysticalagriculture:awakened_supremium_essence:3000159919514936825"),
+            "12F74E49F266865A:mysticalagriculture:inferium_chestplate:1366647091436619354": lambda
+                state: state.can_reach_location("17DCD0325F76FF0C:mysticalagriculture:inferium_essence:1719478072517263116"),
+            "1F8E2FAFA333804D:mysticalagriculture:prudentium_chestplate:2273807293272522829": lambda
+                state: state.can_reach_location("12F74E49F266865A:mysticalagriculture:inferium_chestplate:1366647091436619354")
+                        and state.can_reach_location("1FB5B6707BBFB0CC:mysticalagriculture: prudentium_essence:2284932980189147340"),
+            "74A2874A636757AA:mysticalagriculture:tertium_chestplate:8404428608191813546": lambda
+                state: state.can_reach_location("1F8E2FAFA333804D:mysticalagriculture:prudentium_chestplate:2273807293272522829")
+                        and state.can_reach_location("6B1A8D1CE3D65BA0:mysticalagriculture:tertium_essence:7717636066673843104"),
+            "7FF2C44C6839D48C:mysticalagriculture:imperium_chestplate:9219647219626005644": lambda
+                state: state.can_reach_location("74A2874A636757AA:mysticalagriculture:tertium_chestplate:8404428608191813546")
+                        and state.can_reach_location("1111A4212E59B734:mysticalagriculture:imperium_essence:1229944635667363636"),
+            "6E285CDF62E9EBB8:mysticalagriculture:supremium_chestplate:7937696457747459000": lambda
+                state: state.can_reach_location("7FF2C44C6839D48C:mysticalagriculture:imperium_chestplate:9219647219626005644")
+                        and state.can_reach_location("4DCF187529D58214:mysticalagriculture:supremium_essence:5606726952591655444"),
+            "40812D2012C3068B:mysticalagriculture:awakened_supremium_chestplate:4648045906200037003": lambda
+                state: state.can_reach_location("6E285CDF62E9EBB8:mysticalagriculture:supremium_chestplate:7937696457747459000")
+                        and state.can_reach_location("29A2B58D200D65F9:mysticalagriculture:awakened_supremium_essence:3000159919514936825"),
+            "2613CCF6E2B3A19F:mysticalagriculture:inferium_growth_accelerator:2743761958736208287": lambda
+                state: state.can_reach_location("17DCD0325F76FF0C:mysticalagriculture:inferium_essence:1719478072517263116")
+                        and has_inferium_growth_accelerator(world,state,player),
+            "6D3E1A586AB3F99A:mysticalagriculture:prudentium_growth_accelerator:7871758165739829658": lambda
+                state: state.can_reach_location("2613CCF6E2B3A19F:mysticalagriculture:inferium_growth_accelerator:2743761958736208287")
+                        and has_prudentium_growth_accelerator(world,state,player),
+            "034786603D7FDD18:mysticalagriculture:tertium_growth_accelerator:236305253367012632": lambda
+                state: state.can_reach_location("6D3E1A586AB3F99A:mysticalagriculture:prudentium_growth_accelerator:7871758165739829658")
+                        and has_tertium_growth_accelerator(world,state,player),
+            "5B196B44909E59C9:mysticalagriculture:imperium_growth_accelerator:6564395874097453513": lambda
+                state: state.can_reach_location("034786603D7FDD18:mysticalagriculture:tertium_growth_accelerator:236305253367012632")
+                        and has_imperium_growth_accelerator(world,state,player),
+            "7041A7651D54436A:mysticalagriculture:supremium_growth_accelerator:8088930458459718506": lambda
+                state: state.can_reach_location("5B196B44909E59C9:mysticalagriculture:imperium_growth_accelerator:6564395874097453513")
+                        and has_supremium_growth_accelerator(world,state,player),
+            "24DBF5D8CCA1CE79:Basic Watering Can:2655986716759936633": lambda
+                state: state.can_reach_location("2613CCF6E2B3A19F:mysticalagriculture:inferium_growth_accelerator:2743761958736208287")
+                        and has_iron_ingots(world,state,player),
+            "413D5F6672C5B552:Sprinklers!:4701018479661528402": lambda
+                state: state.can_reach_location("24DBF5D8CCA1CE79:Basic Watering Can:2655986716759936633")
+                        and has_electrum_ingot(world,state,player),
+            "3FA2C4EFEA686EF2:botanypots:terracotta_botany_pot:4585443905325526770": lambda
+                state: state.can_reach_location("413D5F6672C5B552:Sprinklers!:4701018479661528402")
+                        and state.can_reach_location("60665C65C798C959:mysticalagradditions:insanium_essence:6946341067475700057"),
+            "7CA502DB7EC311B0:patchouli:guide_book:8981588173608128944": lambda
+                state: state.can_reach_location("17DCD0325F76FF0C:mysticalagriculture:inferium_essence:1719478072517263116"),
+            "12612B561581014B:mysticalagriculture:prosperity_shard:1324387414151594315": lambda
+                state: state.can_reach_location("7CA502DB7EC311B0:patchouli:guide_book:8981588173608128944")
+                        and state.can_reach_location("17DCD0325F76FF0C:mysticalagriculture:inferium_essence:1719478072517263116"),
+            "00C14C1B77ACFCD2:mysticalagriculture:infusion_crystal:54408351360810194": lambda
+                state: state.can_reach_location("12612B561581014B:mysticalagriculture:prosperity_shard:1324387414151594315")
+                        and state.can_reach_location("17DCD0325F76FF0C:mysticalagriculture:inferium_essence:1719478072517263116")
+                        and has_infusion_crystal(world,state,player),
+            "56CC6260E5B09B5A:mysticalagriculture:master_infusion_crystal:6254482150820715354": lambda
+                state: state.can_reach_location("00C14C1B77ACFCD2:mysticalagriculture:infusion_crystal:54408351360810194")
+                        and has_master_infusion_crystal(world,state,player),
+            "04846D1F54DF981C:mysticalagriculture:infusion_altar:325505054412871708": lambda
+                state: state.can_reach_location("7CA502DB7EC311B0:patchouli:guide_book:8981588173608128944")
+                        and has_gold_ingots(world,state,player),
+            "2CB97A9EECD58E88:mysticalagriculture:seed_reprocessor:3222741831357140616": lambda
+                state: state.can_reach_location("04846D1F54DF981C:mysticalagriculture:infusion_altar:325505054412871708")
+                        and has_iron_ingots(world,state,player) and has_soulium_ingot(world,state,player)
+                        and has_redstone_ingot(world,state,player) and has_thermal_machine_frame(world,state,player),
+            "6543E32C66892345:mysticalagriculture:tinkering_table:7296925601108665157": lambda
+                state: state.can_reach_location("2CB97A9EECD58E88:mysticalagriculture:seed_reprocessor:3222741831357140616")
+                        and state.can_reach_location("403922E054130670:Into the Nether:4627768438978446960"),
+            "5C9ECD8109413F70:mysticalagriculture:flight_augment:6673997651899400048": lambda
+                state: state.can_reach_location("6543E32C66892345:mysticalagriculture:tinkering_table:7296925601108665157")
+                        and state.can_reach_location("4DCF187529D58214:mysticalagriculture:supremium_essence:5606726952591655444"),
+            "0AC66AFEA56D0F81:mysticalagriculture:air_seeds:776425627697614721": lambda
+                state: state.can_reach_location("04846D1F54DF981C:mysticalagriculture:infusion_altar:325505054412871708"),
+            "7E31F38928E965F2:mysticalagriculture:earth_seeds:9093316893060195826": lambda
+                state: state.can_reach_location("04846D1F54DF981C:mysticalagriculture:infusion_altar:325505054412871708"),
+            "09999790B789A604:mysticalagriculture:water_seeds:691750665588418052": lambda
+                state: state.can_reach_location("04846D1F54DF981C:mysticalagriculture:infusion_altar:325505054412871708"),
+            "19297AF6271B1473:mysticalagriculture:fire_seeds:1813115522629964915": lambda
+                state: state.can_reach_location("04846D1F54DF981C:mysticalagriculture:infusion_altar:325505054412871708"),
+            "21EBF76CE1C8DD44:mysticalagriculture:end_steel_seeds:2444319269795192132": lambda
+                state: state.can_reach_location("04846D1F54DF981C:mysticalagriculture:infusion_altar:325505054412871708")
+                        and has_end_steel_ingot(world,state,player)
+                        and state.can_reach_location("4DCF187529D58214:mysticalagriculture:supremium_essence:5606726952591655444"),
+            "4AE8A5DD70731DC5:mysticalagriculture:vibrant_alloy_seeds:5397746523896487365": lambda
+                state: state.can_reach_location("04846D1F54DF981C:mysticalagriculture:infusion_altar:325505054412871708")
+                        and has_vibrant_alloy_ingot(world,state,player)
+                        and state.can_reach_location("4DCF187529D58214:mysticalagriculture:supremium_essence:5606726952591655444"),
+            "3D514FFE4B4FABD0:mysticalagriculture:uraninite_seeds:4418400663030967248": lambda
+                state: state.can_reach_location("04846D1F54DF981C:mysticalagriculture:infusion_altar:325505054412871708")
+                        and state.can_reach_location("4DCF187529D58214:mysticalagriculture:supremium_essence:5606726952591655444"),
+            "488BE929D223408C:mysticalagriculture:enderium_seeds:5227528158322049164": lambda
+                state: state.can_reach_location("04846D1F54DF981C:mysticalagriculture:infusion_altar:325505054412871708")
+                        and has_enderium_ingot(world,state,player)
+                        and state.can_reach_location("4DCF187529D58214:mysticalagriculture:supremium_essence:5606726952591655444"),
+            "645144B65DD8C33D:mysticalagriculture:diamond_seeds:7228634426955580221": lambda
+                state: state.can_reach_location("04846D1F54DF981C:mysticalagriculture:infusion_altar:325505054412871708")
+                        and state.can_reach_location("4DCF187529D58214:mysticalagriculture:supremium_essence:5606726952591655444"),
+            "1BBED5317DB102D4:mysticalagriculture:niotic_crystal_seeds:1999269693137945300": lambda
+                state: state.can_reach_location("04846D1F54DF981C:mysticalagriculture:infusion_altar:325505054412871708")
+                        and state.can_reach_location("4DCF187529D58214:mysticalagriculture:supremium_essence:5606726952591655444"),
+            "721DE48EB10F97EE:mysticalagriculture:netherite_seeds:8222979796155471854": lambda
+                state: state.can_reach_location("04846D1F54DF981C:mysticalagriculture:infusion_altar:325505054412871708")
+                        and has_netherite_ingots(world,state,player)
+                        and state.can_reach_location("4DCF187529D58214:mysticalagriculture:supremium_essence:5606726952591655444"),
+            "4C4BFB01B08B9B41:mysticalagriculture:flux_infused_gem_seeds:5497763754811300673": lambda
+                state: state.can_reach_location("04846D1F54DF981C:mysticalagriculture:infusion_altar:325505054412871708")
+                        and state.can_reach_location("4DCF187529D58214:mysticalagriculture:supremium_essence:5606726952591655444"),
+            "626FBCC4BE843CEB:mysticalagriculture:wither_skeleton_seeds:7093095491327769835": lambda
+                state: state.can_reach_location("04846D1F54DF981C:mysticalagriculture:infusion_altar:325505054412871708")
+                        and state.can_reach_location("4DCF187529D58214:mysticalagriculture:supremium_essence:5606726952591655444")
+                        and state.can_reach_region('The Nether', player),
+            "3BFF866B32E6FD5A:mysticalagriculture:spirited_crystal_seeds:4323321962272587098": lambda
+                state: state.can_reach_location("04846D1F54DF981C:mysticalagriculture:infusion_altar:325505054412871708")
+                        and state.can_reach_location("4DCF187529D58214:mysticalagriculture:supremium_essence:5606726952591655444"),
+            "10AB6EF714EC6571:mysticalagriculture:emerald_seeds:1201175733111383409": lambda
+                state: state.can_reach_location("04846D1F54DF981C:mysticalagriculture:infusion_altar:325505054412871708")
+                        and state.can_reach_location("4DCF187529D58214:mysticalagriculture:supremium_essence:5606726952591655444"),
+            "2DF4726B8D54971D:mysticalagriculture:yellorium_seeds:3311397432282355485": lambda
+                state: state.can_reach_location("04846D1F54DF981C:mysticalagriculture:infusion_altar:325505054412871708")
+                        and state.can_reach_location("4DCF187529D58214:mysticalagriculture:supremium_essence:5606726952591655444")
+                        and state.can_reach_location("74076796EE6A84BE:bigreactors:yellorium_ingot:8360765131179328702"),
+            "6B30912D3790F068:mysticalagriculture:nitro_crystal_seeds:7723832984332202088": lambda
+                state: state.can_reach_location("04846D1F54DF981C:mysticalagriculture:infusion_altar:325505054412871708")
+                        and state.can_reach_location("60665C65C798C959:mysticalagradditions:insanium_essence:6946341067475700057"),
+            "631886694B190186:mysticalagriculture:gaia_spirit_seeds:7140604995985539462": lambda
+                state: state.can_reach_location("04846D1F54DF981C:mysticalagriculture:infusion_altar:325505054412871708")
+                        and state.can_reach_location("60665C65C798C959:mysticalagradditions:insanium_essence:6946341067475700057")
+                        and state.can_reach_location("79E30F3A54F84EA4:botania:gaia_ingot:8782880441510678180"),
+            "1F2933C86F227F89:mysticalagriculture:awakened_draconium_seeds:2245382825171910537": lambda
+                state: state.can_reach_location("04846D1F54DF981C:mysticalagriculture:infusion_altar:325505054412871708")
+                        and state.can_reach_location("60665C65C798C959:mysticalagradditions:insanium_essence:6946341067475700057")
+                        and has_awakned_draconium(world,state,player),
+            "29E40CD5EF7495FB:mysticalagriculture:nether_star_seeds:3018551763230037499": lambda
+                state: state.can_reach_location("04846D1F54DF981C:mysticalagriculture:infusion_altar:325505054412871708")
+                        and state.can_reach_location("60665C65C798C959:mysticalagradditions:insanium_essence:6946341067475700057"),
+            "0C20C02B76C10512:mysticalagriculture:dragon_egg_seeds:873909620618364178": lambda
+                state: state.can_reach_location("04846D1F54DF981C:mysticalagriculture:infusion_altar:325505054412871708")
+                        and state.can_reach_location("60665C65C798C959:mysticalagradditions:insanium_essence:6946341067475700057")
+                        and state.can_reach_location("46F450DDEAECE702:minecraft:dragon_egg:5112800391031744258"),
+            "28ADE47BE9ED4B9F:mysticalagriculture:neutronium_seeds:2931250153344813983": lambda
+                state: state.can_reach_location("04846D1F54DF981C:mysticalagriculture:infusion_altar:325505054412871708")
+                        and state.can_reach_location("60665C65C798C959:mysticalagradditions:insanium_essence:6946341067475700057")
+                        and has_neutronium_ingot(world,state,player),
+
 
             # Epsilon
             "304C3DA255E8BEA1:enderio:basic_capacitor:3480224379485863585": lambda
@@ -295,10 +572,6 @@ def get_rules_lookup(world, player: int):
             "70A23413D989C094:hangglider:hang_glider:8116106738333761684": lambda
                 state: state.can_reach_location("3EE16F0264052C50:Getting Started:4531024756170107984")
                        and has_iron_ingots(world, state, player),
-
-            # Delta
-            "17DCD0325F76FF0C:mysticalagriculture:inferium_essence:1719478072517263116": lambda
-                state: state.can_reach_location("3EE16F0264052C50:Getting Started:4531024756170107984"),
 
             # Mu
             "4F263B60E4157BCA:constructionwand:stone_wand:5703311265440824266": lambda state: state.can_reach_location(
@@ -360,17 +633,19 @@ def get_rules_lookup(world, player: int):
 
 
             # Psi
+            "5104ACF37E471F1A:extendedcrafting:basic_catalyst:5837981178774626074": lambda
+                state: state.can_reach_location("3EE16F0264052C50:Getting Started:4531024756170107984")
+                        and has_basic_crafting_table(world,state,player),
+            "": lambda
+                state: state.can_reach_location(""),
+            "": lambda
+                state: state.can_reach_location(""),
 
             # Omega
             "546C44F3B917BB85:Creative Items:6083313010243779461": lambda state: state.can_reach_location(
                 "3EE16F0264052C50:Getting Started:4531024756170107984"),
 
-            "": lambda
-                state: state.can_reach_location(""),
-            "": lambda
-                state: state.can_reach_location(""),
-            "": lambda
-                state: state.can_reach_location(""),
+
             "": lambda
                 state: state.can_reach_location(""),
             "": lambda
