@@ -127,6 +127,15 @@ def has_awakned_draconium(world: "MinecraftOsrWorld", state: CollectionState, pl
 def has_neutronium_ingot(world: "MinecraftOsrWorld", state: CollectionState, player: int) -> bool:
     return state.has("neutronium ingot", player)
 
+def has_energetic_alloy_ingot(world: "MinecraftOsrWorld", state: CollectionState, player: int) -> bool:
+    return state.has("energetic alloy ingot", player)
+
+def has_steel_ingot(world: "MinecraftOsrWorld", state: CollectionState, player: int) -> bool:
+    return state.has("steel ingot", player)
+
+def has_pulsating_alloy_ingot(world: "MinecraftOsrWorld", state: CollectionState, player: int) -> bool:
+    return state.has("pulsating alloy ingot", player)
+
 
 
 
@@ -530,6 +539,64 @@ def get_rules_lookup(world, player: int):
             "304C3DA255E8BEA1:enderio:basic_capacitor:3480224379485863585": lambda
                 state: state.can_reach_location("3EE16F0264052C50:Getting Started:4531024756170107984")
                        and has_copper_ingots(world, state, player),
+            "2AFC300B86665BAB:enderio: double_layer_capacitor:3097403469781687211": lambda
+                state: state.can_reach_location("304C3DA255E8BEA1:enderio:basic_capacitor:3480224379485863585")
+                        and has_energetic_alloy_ingot(world,state,player),
+            "62DE39B1BEF752BA:enderio:octadic_capacitor:7124195096122577594": lambda
+                state: state.can_reach_location("2AFC300B86665BAB:enderio: double_layer_capacitor:3097403469781687211")
+                        and has_vibrant_alloy_ingot(world,state,player)
+                        and state.can_reach_location("24F3DD2D706EBFB6:3x3 Pressure Chamber:2662714991935668150"),
+            "4BB8FBE275D2AE7F:Pipez:5456387898617278079": lambda
+                state: state.can_reach_location("304C3DA255E8BEA1:enderio:basic_capacitor:3480224379485863585")
+                        and has_item_conduit(world,state,player) and has_fluid_conduit(world,state,player)
+                        and has_steel_ingot(world,state,player),
+            "599D753764477C22:Conduit Upgrades:6457446321485216802": lambda
+                state: state.can_reach_location("304C3DA255E8BEA1:enderio:basic_capacitor:3480224379485863585")
+                        and has_energetic_alloy_ingot(world,state,player) and has_redstone_ingot(world,state,player)
+                        and has_iron_ingots(world,state,player) and has_redstone_alloy_ingots(world,state,player)
+                        and has_conductive_alloy_ingots(world,state,player) and has_soularium_ingot(world,state,player)
+                        and has_energetic_alloy_ingot(world,state,player)
+                        and state.can_reach_location("236AB7E3C6AE1F38:enderio:slice_and_splice:2552054327777566520"),
+            "6F25BC39A243FB15:enderio:basic_capacitor_bank:8009014468069817109": lambda
+                state: state.can_reach_location("304C3DA255E8BEA1:enderio:basic_capacitor:3480224379485863585"),
+            "6D75D785EB89AFAF:enderio:advanced_capacitor_bank:7887447292591583151": lambda
+                state: state.can_reach_location("6F25BC39A243FB15:enderio:basic_capacitor_bank:8009014468069817109")
+                        and state.can_reach_location("2AFC300B86665BAB:enderio: double_layer_capacitor:3097403469781687211"),
+            "2B2FB3D50B29B04F:enderio:vibrant_capacitor_bank:3111903595132989519": lambda
+                state: state.can_reach_location("6D75D785EB89AFAF:enderio:advanced_capacitor_bank:7887447292591583151")
+                        and state.can_reach_location("62DE39B1BEF752BA:enderio:octadic_capacitor:7124195096122577594"),
+            "123F1D4B1509DA03:enderio:energetic_photovoltaic_module:1314801824528194051": lambda
+                state: state.can_reach_location("304C3DA255E8BEA1:enderio:basic_capacitor:3480224379485863585")
+                        and has_gold_ingots(world,state,player)
+                        and state.can_reach_location("41D4504AFE0D80F8:enderio:alloy_smelter:4743504590548074744"),
+            "110127114AE2FDA9:enderio:pulsating_photovoltaic_module:1225303528845802921": lambda
+                state: state.can_reach_location("123F1D4B1509DA03:enderio:energetic_photovoltaic_module:1314801824528194051"),
+                        and has_p,
+            "": lambda
+                state: state.can_reach_location(""),
+            "": lambda
+                state: state.can_reach_location(""),
+            "": lambda
+                state: state.can_reach_location(""),
+            "": lambda
+                state: state.can_reach_location(""),
+            "": lambda
+                state: state.can_reach_location(""),
+            "": lambda
+                state: state.can_reach_location(""),
+            "": lambda
+                state: state.can_reach_location(""),
+            "": lambda
+                state: state.can_reach_location(""),
+            "": lambda
+                state: state.can_reach_location(""),
+            "": lambda
+                state: state.can_reach_location(""),
+            "": lambda
+                state: state.can_reach_location(""),
+            "": lambda
+                state: state.can_reach_location(""),
+
 
             #Zeta
             "5D7D2A4C3BA37750:Into the Aether:6736587124522579792": lambda state: state.can_reach_location(
@@ -646,8 +713,7 @@ def get_rules_lookup(world, player: int):
                 "3EE16F0264052C50:Getting Started:4531024756170107984"),
 
 
-            "": lambda
-                state: state.can_reach_location(""),
+
             "": lambda
                 state: state.can_reach_location(""),
             "": lambda

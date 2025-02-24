@@ -41,7 +41,10 @@
 		"vibrant_alloy_ingot",
 		"enderium_ingot",
 		"awakned_draconium",
-		"neutronium_ingot"
+		"neutronium_ingot",
+		"energetic_alloy_ingot",
+		"steel_ingot",
+		"pulsating_alloy_ingot"
 	],
 	"progression_items": [
 		"Structure Compass (Village)",
@@ -95,7 +98,10 @@
 		"vibrant_alloy_ingot": 3,
 		"enderium_ingot": 3,
 		"awakned_draconium": 3,
-		"neutronium_ingot": 3
+		"neutronium_ingot": 3,
+		"energetic_alloy_ingot": 3,
+		"steel_ingot": 3,
+		"pulsating_alloy_ingot": 3
 	},
 	"junk_weights": {
 	    "Legendary Reward": 1,
