@@ -187,6 +187,7 @@ jdk*/
 minecraft*/
 minecraft_versions.json
 !worlds/minecraft/
+!worlds/minecraftosr/
 
 # pyenv
 .python-version
