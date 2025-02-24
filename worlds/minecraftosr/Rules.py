@@ -50,7 +50,7 @@ def has_redstone_alloy_ingots(world: "MinecraftOsrWorld", state: CollectionState
     return state.has("redstone alloy ingot", player)
 
 def has_netherite_ingots(world: "MinecraftOsrWorld", state: CollectionState, player: int) -> bool:
-    return state.has("netherite ingot", player)
+    return state.has("netherite ingot", player) and state.can_reach_location("403922E054130670:Into the Nether:4627768438978446960", player)
 
 def has_conductive_alloy_ingots(world: "MinecraftOsrWorld", state: CollectionState, player: int) -> bool:
     return state.has("conductive alloy ingot", player)
@@ -142,10 +142,39 @@ def has_copper_alloy_ingot(world: "MinecraftOsrWorld", state: CollectionState, p
 def has_tesseract(world: "MinecraftOsrWorld", state: CollectionState, player: int) -> bool:
     return state.has("tesseract", player)
 
+def has_ender_ingot(world: "MinecraftOsrWorld", state: CollectionState, player: int) -> bool:
+    return state.has("ender ingot", player)
+
+def has_invar_ingot(world: "MinecraftOsrWorld", state: CollectionState, player: int) -> bool:
+    return state.has("invar ingot", player)
+
+def has_signalum_ingot(world: "MinecraftOsrWorld", state: CollectionState, player: int) -> bool:
+    return state.has("signalum ingot", player)
+
+def has_lumium_ingot(world: "MinecraftOsrWorld", state: CollectionState, player: int) -> bool:
+    return state.has("lumium ingot", player)
+
 
 
 def get_rules_lookup(world, player: int):
     rules_lookup = {
+        "entrances": {
+            "Nether Portal": lambda state: state.can_reach_location("4632C8C4F1622D5D:Into the End:5058326079679376733"),
+            "End Portal": lambda state: enter_stronghold(world, state, player)
+                                        and state.has('3 Ender Pearls', player, 4),
+            "Overworld Structure 1": lambda state: can_adventure(world, state, player)
+                                                   and has_structure_compass(world, state, "Overworld Structure 1",
+                                                                             player),
+            "Overworld Structure 2": lambda state: can_adventure(world, state, player)
+                                                   and has_structure_compass(world, state, "Overworld Structure 2",
+                                                                             player),
+            "Nether Structure 1": lambda state: can_adventure(world, state, player)
+                                                and has_structure_compass(world, state, "Nether Structure 1", player),
+            "Nether Structure 2": lambda state: can_adventure(world, state, player)
+                                                and has_structure_compass(world, state, "Nether Structure 2", player),
+            "The End Structure": lambda state: can_adventure(world, state, player)
+                                               and has_structure_compass(world, state, "The End Structure", player),
+        },
         "locations": {
             # Alpha
             "0366E4C57024B5E1:exdeorum:wooden_hammer:245134766379415009": lambda state:
@@ -605,7 +634,8 @@ def get_rules_lookup(world, player: int):
                         and state.can_reach_location("45C50B63083377EB:botania:mana_pool:5027437078996285419")
                         and has_tesseract(world,state,player),
             "0DCAF4BD7DA81E0C:Dim/Ender Storage:993875762482781708": lambda
-                state: state.can_reach_location("0DA6D312F162E68A:tesseract:tesseract:983705646939694730"),
+                state: state.can_reach_location("0DA6D312F162E68A:tesseract:tesseract:983705646939694730")
+                        and state.can_reach_location("77D5B7D22F8D1B8E:minecraft:blaze_rod:8635009973921586062"),
             "41D4504AFE0D80F8:enderio:alloy_smelter:4743504590548074744": lambda
                 state: state.can_reach_location("3BC52195653A9011:enderio:stirling_generator:4306885544181927953"),
             "430434760D2EC53D:enderio:dark_steel_sword:4829042382079968573": lambda
@@ -632,22 +662,104 @@ def get_rules_lookup(world, player: int):
                 state: state.can_reach_location("6BE482A7F8998527:enderio:soul_binder:7774482514690278695"),
             "3BAAF007B830AD10:enderio:staff_of_levity:4299512710224194832": lambda
                 state: state.can_reach_location("6BE482A7F8998527:enderio:soul_binder:7774482514690278695")
-                        and state.can_reach_location("4632C8C4F1622D5D:Into the End:5058326079679376733"),
+                        and state.can_reach_location("46F450DDEAECE702:minecraft:dragon_egg:5112800391031744258"),
 
 
             #Zeta
-            "5D7D2A4C3BA37750:Into the Aether:6736587124522579792": lambda state: state.can_reach_location(
-                "3EE16F0264052C50:Getting Started:4531024756170107984"),
+            "5D7D2A4C3BA37750:Into the Aether:6736587124522579792": lambda state:
+            state.can_reach_location("3EE16F0264052C50:Getting Started:4531024756170107984")
+                        and has_iron_ingots(world,state,player),
             "77F0DF050A474878:Into the Twilight Forest:8642652897664256120": lambda state: state.can_reach_location(
                 "3EE16F0264052C50:Getting Started:4531024756170107984"),
             "3C93642728A0CAAA:Into the Undergarden:4364942583200271018": lambda
-                state: state.can_reach_location("3EE16F0264052C50:Getting Started:4531024756170107984"),
+                state: state.can_reach_location("3EE16F0264052C50:Getting Started:4531024756170107984")
+                        and has_iron_ingots(world,state,player) and has_gold_ingots(world,state,player)
+                        and has_redstone_ingot(world,state,player) and has_netherite_ingots(world,state,player),
             "403922E054130670:Into the Nether:4627768438978446960": lambda
                 state: state.can_reach_location("3EE16F0264052C50:Getting Started:4531024756170107984"),
-
-            # Zeta
+            "4632C8C4F1622D5D:Into the End: 5058326079679376733": lambda
+                state: state.can_reach_location("26B34910CE753FB9:Clouds:2788652930804563897")
+                        and state.can_reach_location("1759B24EE5751EF7:Into the Mining Dimensions:1682571987726442231")
+                        and state.can_reach_location("1D639216999D7353:minecraft:ghast_tear:2117696875558433619"),
+            "1759B24EE5751EF7:Into the Mining Dimensions:1682571987726442231": lambda
+                state: state.can_reach_location("5D7D2A4C3BA37750:Into the Aether:6736587124522579792")
+                        and state.can_reach_location("3C93642728A0CAAA:Into the Undergarden:4364942583200271018")
+                        and state.can_reach_location("36DE9BE5B9E817D5:minecraft:wither_skeleton_skull:3953768933846685653")
+                        and has_ender_ingot(world,state,player)
+                        and state.can_reach_location("31A628554F318833:botania:pure_daisy:3577591300858415155"),
+            "69912119C98D6247:Conquor the Twilight:7606897640244863559": lambda
+                state: state.can_reach_location("77F0DF050A474878:Into the Twilight Forest:8642652897664256120"),
+            "77D5B7D22F8D1B8E:minecraft:blaze_rod:8635009973921586062": lambda
+                state: state.can_reach_location("403922E054130670:Into the Nether:4627768438978446960"),
+            "0B023FB0978509B7:minecraft:nether_wart:793266512059500983": lambda
+                state: state.can_reach_location("403922E054130670:Into the Nether:4627768438978446960"),
+            "36DE9BE5B9E817D5:minecraft:wither_skeleton_skull:3953768933846685653": lambda
+                state: state.can_reach_location("403922E054130670:Into the Nether:4627768438978446960"),
+            "1D639216999D7353:minecraft:ghast_tear:2117696875558433619": lambda
+                state: state.can_reach_location("403922E054130670:Into the Nether:4627768438978446960"),
+            "51A0F9A5FD72B84C:Dungeon Master:5881975604662941772": lambda
+                state: state.can_reach_location("5D7D2A4C3BA37750:Into the Aether:6736587124522579792"),
+            "0187148CB8910C44:New Resources:110079310518357060": lambda
+                state: state.can_reach_location("5D7D2A4C3BA37750:Into the Aether:6736587124522579792"),
+            "1892F7D6B155AADD:aether:enchanted_gravitite:1770750104980269789": lambda
+                state: state.can_reach_location("5D7D2A4C3BA37750:Into the Aether:6736587124522579792"),
+            "26B34910CE753FB9:Clouds:2788652930804563897": lambda
+                state: state.can_reach_location("5D7D2A4C3BA37750:Into the Aether:6736587124522579792"),
+            "0332B6BA96B14AD1:undergarden:cloggrum_sword:230447443457690321": lambda
+                state: state.can_reach_location("3C93642728A0CAAA:Into the Undergarden:4364942583200271018"),
+            "009DC6680176855E:undergarden:utherium_sword:44409721347016030": lambda
+                state: state.can_reach_location("3C93642728A0CAAA:Into the Undergarden:4364942583200271018"),
+            "4ED75332CE21FB62:undergarden:forgotten_sword:5681100932622973794": lambda
+                state: state.can_reach_location("3C93642728A0CAAA:Into the Undergarden:4364942583200271018")
+                        and state.can_reach_location("0332B6BA96B14AD1:undergarden:cloggrum_sword:230447443457690321"),
+            "7995042AD8710998:undergarden:froststeel_sword:8760913232185592216": lambda
+                state: state.can_reach_location("3C93642728A0CAAA:Into the Undergarden:4364942583200271018"),
+            "46F450DDEAECE702:minecraft:dragon_egg:5112800391031744258": lambda
+                state: state.can_reach_location("4632C8C4F1622D5D:Into the End: 5058326079679376733"),
+            "130498751078C956:minecraft:elytra:1370387815182420310": lambda
+                state: state.can_reach_location("4632C8C4F1622D5D:Into the End: 5058326079679376733"),
+            "1C49E92D224E3EB3:minecraft:dragon_head:2038416686420213427": lambda
+                state: state.can_reach_location("4632C8C4F1622D5D:Into the End: 5058326079679376733"),
+            "6634C250A453D27A:minecraft:shulker_shell:7364724942267732602": lambda
+                state: state.can_reach_location("4632C8C4F1622D5D:Into the End: 5058326079679376733"),
             "0754204BD1B84C6E:chunkloaders:basic_chunk_loader:528082566322343022": lambda
-                state: state.can_reach_location("3EE16F0264052C50:Getting Started:4531024756170107984"),
+                state: state.can_reach_location("3EE16F0264052C50:Getting Started:4531024756170107984")
+                        and has_iron_ingots(world,state,player),
+            "1C49D56AD66A9A18:chunkloaders:advanced_chunk_loader:2038394961202420248": lambda
+                state: state.can_reach_location("0754204BD1B84C6E:chunkloaders:basic_chunk_loader:528082566322343022")
+                        and has_gold_ingots(world,state,player),
+            "41ACAC42D3ECF8A9:chunkloaders:ultimate_chunk_loader:4732346711482890409": lambda
+                state: state.can_reach_location("1C49D56AD66A9A18:chunkloaders:advanced_chunk_loader:2038394961202420248"),
+            "77120C4E9ECB9A5B:angelring:diamond_ring:8579933771905342043": lambda
+                state: state.can_reach_location("1467C86B0DB6BF13:ironjetpacks:capacitor:1470364165476892435")
+                        and state.can_reach_location("130498751078C956:minecraft:elytra:1370387815182420310")
+                        and state.can_reach_location("1D639216999D7353:minecraft:ghast_tear:2117696875558433619"),
+            "4F2E868BE8E4EDBD:angelring:angel_ring:5705645713390890429": lambda
+                state: state.can_reach_location("77120C4E9ECB9A5B:angelring:diamond_ring:8579933771905342043")
+                        and has_gold_ingots(world,state,player)
+                        and state.can_reach_location("77D5B7D22F8D1B8E:minecraft:blaze_rod:8635009973921586062"),
+            "67E3E6364520C852:angelring:energetic_angel_ring:7486080126382295122": lambda
+                state: state.can_reach_location("4F2E868BE8E4EDBD:angelring:angel_ring:5705645713390890429")
+                        and has_netherite_ingots(world,state,player),
+            "0076047DA7FD61DF:angelring:leadstone_angel_ring:33218984987681247": lambda
+                state: state.can_reach_location("67E3E6364520C852:angelring:energetic_angel_ring:7486080126382295122")
+                        and has_lead_ingots(world,state,player) and has_invar_ingot(world,state,player)
+                        and has_gear_mold(world,state,player)
+                        and state.can_reach_location("4FFD39276D8238DF:thermal:machine_smelter:5763825939607861471"),
+            "3E2361BEEA7F85CD:angelring:hardened_angel_ring:4477529927142311373": lambda
+                state: state.can_reach_location("0076047DA7FD61DF:angelring:leadstone_angel_ring:33218984987681247")
+                        and has_electrum_ingot(world,state,player) and has_signalum_ingot(world,state,player)
+                        and has_silver_ingots(world,state,player),
+            "0AFEE76D3204FB5B:angelring:reinforced_angel_ring:792325040640424795": lambda
+                state: state.can_reach_location("3E2361BEEA7F85CD:angelring:hardened_angel_ring:4477529927142311373")
+                        and state.can_reach_location("007A44E227967158:thermal:machine_crucible:34415685276168536")
+                        and (state.can_reach_location("56FBAF04FEC1E0F8:thermal:machine_bottler:6267795742405026040")
+                             or (state.can_reach_location("7AC647D823CD6523:immersiveengineering:light_engineering:8846837511655089443")
+                             and state.can_reach_location("4B61E75F57941931:immersiveengineering:steel_scaffolding_standard:5431877022262761777"))),
+            "0E591671C9C77C30:angelring:resonant_angel_ring:1033882267430648880": lambda
+                state: state.can_reach_location("0AFEE76D3204FB5B:angelring:reinforced_angel_ring:792325040640424795")
+                        and has_enderium_ingot(world,state,player) and has_lumium_ingot(world,state,player)
+                        and state.can_reach_location("5D7D2A4C3BA37750:Into the Aether:6736587124522579792"),
 
             # Eta
             "6450516E0A3A74DF:mekanism:ingot_osmium:7228366934989501663": lambda
@@ -751,10 +863,7 @@ def get_rules_lookup(world, player: int):
 
 
 
-            "": lambda
-                state: state.can_reach_location(""),
-            "": lambda
-                state: state.can_reach_location(""),
+
             "": lambda
                 state: state.can_reach_location(""),
             "": lambda
