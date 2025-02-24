@@ -3,7 +3,7 @@ import json
 import settings
 import typing
 from base64 import b64encode, b64decode
-from typing import Dict, Any, Mapping
+from typing import Dict, Any
 
 from BaseClasses import Region, Entrance, Item, Tutorial, ItemClassification, Location
 from worlds.AutoWorld import World, WebWorld
@@ -54,12 +54,12 @@ class MinecraftOsrWorld(World):
     structures, and materials to create a portal to another world. Defeat the Ender Dragon, and claim
     victory!
     """
-    game = "Minecraft Ozone Skyblock Reborn"
+    game = "Minecraft OSR"
     options_dataclass = MinecraftOsrOptions
     options: MinecraftOsrOptions
     settings: typing.ClassVar[MinecraftOsrSettings]
     topology_present = True
-    web = MinecraftOsrWebWorld
+    web = MinecraftOsrWebWorld()
 
     item_name_to_id = Constants.item_name_to_id
     location_name_to_id = Constants.location_name_to_id
@@ -84,7 +84,7 @@ class MinecraftOsrWorld(World):
         item_class = ItemClassification.filler
         if name in Constants.item_info["progression_items"]:
             item_class = ItemClassification.progression
-        if name in Constants.item_info["usefule_items"]:
+        if name in Constants.item_info["useful_items"]:
             item_class = ItemClassification.useful
         if name in Constants.item_info["trap_items"]:
             item_class = ItemClassification.trap
@@ -97,40 +97,41 @@ class MinecraftOsrWorld(World):
         loc.place_locked_item(self.create_event_item(event_name))
         region.locations.append(loc)
 
-    def create_event_item(self, naem: str) -> Item:
-        item = self.create_item(naem)
+    def create_event_item(self, name: str) -> Item:
+        item = self.create_item(name)
         item.classification = ItemClassification.progression
         return item
 
-    def create_region(self) -> None:
+    def create_regions(self) -> None:
         # Create regions
         for region_name, exits in Constants.region_info["regions"]:
             r = Region(region_name, self.player, self.multiworld)
             for exit_name in exits:
                 r.exits.append(Entrance(self.player, exit_name, r))
-                self.multiworld.regions.append(r)
+            self.multiworld.regions.append(r)
 
-                # Bind mandatory connections
-            for entr_name, region_name in Constants.region_info["mandatory_connections"]:
-                e = self.multiworld.get_entrance(entr_name, self.player)
-                r = self.multiworld.get_region(region_name, self.player)
-                e.connect(r)
+        # Bind mandatory connections
+        for entr_name, region_name in Constants.region_info["mandatory_connections"]:
+            e = self.multiworld.get_entrance(entr_name, self.player)
+            r = self.multiworld.get_region(region_name, self.player)
+            e.connect(r)
 
-                # Add locations
-            for region_name, locations in Constants.location_info["locations_by_region"].items():
-                region = self.multiworld.get_region(region_name, self.player)
-                for loc_name in locations:
-                    loc = MinecraftOsrLocation(self.player, loc_name,
-                                            self.location_name_to_id.get(loc_name, None), region)
-                    region.locations.append(loc)
+        # Add locations
+        for region_name, locations in Constants.location_info["locations_by_region"].items():
 
-                # Add events
-            self.create_event("Nether Fortress", "Blaze Rods")
-            self.create_event("The End", "Ender Dragon")
-            self.create_event("Nether Fortress", "Wither")
+            region = self.multiworld.get_region(region_name, self.player)
+            for loc_name in locations:
+                loc = MinecraftOsrLocation(self.player, loc_name,
+                    self.location_name_to_id.get(loc_name, None), region)
+                region.locations.append(loc)
 
-            # Shuffle the connections
-            shuffle_structures(self)
+        # Add events
+        #self.create_event("Nether Fortress", "Blaze Rods")
+        #self.create_event("The End", "Ender Dragon")
+        #self.create_event("Nether Fortress", "Wither")
+
+        # Shuffle the connections
+        shuffle_structures(self)
 
     def create_items(self) -> None:
         self.multiworld.itempool += build_item_pool(self)
@@ -151,11 +152,9 @@ class MinecraftOsrWorld(World):
 
 class MinecraftOsrLocation(Location):
     game = "Minecraft OSR"
-    """to change later"""
 
 class MinecraftOsrItem(Item):
     game = "Minecraft OSR"
-    """to change later"""
 
 def mc_update_output(raw_data, server, port):
     data = json.loads(b64decode(raw_data))

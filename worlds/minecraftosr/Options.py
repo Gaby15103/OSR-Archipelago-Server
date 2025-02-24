@@ -15,7 +15,7 @@ class QuestGoal(Choice):
     display_name = "Objective"
     option_simple_achievement = 0
     option_dragon_egg = 1
-    option_infinite_wand = 2
+    option_infinity_wand = 2
     option_conquor_the_twilight = 3
     option_gaia_spirit_ingot = 4
     option_insanite_block = 5
@@ -26,7 +26,6 @@ class QuestGoal(Choice):
     option_infinity_ingot = 10
     option_infinity_tools = 11
     option_infinity_armor = 12
-    option_creative_item  = 13
     default = 0
 
 class ShuffleStructures(DefaultOnToggle):

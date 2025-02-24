@@ -1,5 +1,6 @@
 {
   "all_locations": [
+    "0366E4C57024B5E1:exdeorum:wooden_hammer:245134766379415009",
     "3267B5D26EB6EDAC:Space Suit:3632071539902836140",
     "130498751078C956:minecraft:elytra:1370387815182420310",
     "52558E9A9B255F2C:Alloy Kiln:5932804878809521964",
@@ -578,7 +579,8 @@
     "4C4BFB01B08B9B41:mysticalagriculture:flux_infused_gem_seeds:5497763754811300673",
     "11B0D33506A1E4B7:Mechanical Hammer:1274750919243850935",
     "4BB8FBE275D2AE7F:Pipez:5456387898617278079",
-    "3C917DD1175757FB:powah:thermo_generator_starter:436440785089195826751F3D3ABAD3D00CC:Infinity Armor:5905296270712176844",
+    "3C917DD1175757FB:powah:thermo_generator_starter:4364407850891958267",
+    "51F3D3ABAD3D00CC:Infinity Armor:5905296270712176844",
     "1722CE66E8CA2EFF:thermal:dynamo_compression:1667121753468055295",
     "2E3936DE3FD51B85:Infinity Booster:3330753727598762885",
     "31A628554F318833:botania:pure_daisy:3577591300858415155",
@@ -591,7 +593,6 @@
     "69912119C98D6247:Conquor the Twilight:7606897640244863559",
     "6A16098F8D637340:thermal:machine_crystallizer:7644307929665073984",
     "2D42B0ECBDAA096C:mob_grinding_utils:fan_upgrade_width:3261363611010468204",
-    "0366E4C57024B5E1:exdeorum:wooden_hammer:245134766379415009",
     "419BE58F0847E557:Dimension Creation:4727624636337481047",
     "7F51221B616F8DD5:pneumaticcraft:creative_compressor:9174151416924573141",
     "1E19F85B406BFC9D:betterfurnacesreforged:netherhot_furnace:2169037766362135709",
@@ -626,5 +627,32 @@
     "725C86A23081A0F6:avaritia:infinity_ingot:8240609449337790710",
     "0299EC5E270E0F04:exdeorum:golden_hammer:187440748638899972",
     "04846D1F54DF981C:mysticalagriculture:infusion_altar:325505054412871708"
-  ]
+  ],
+  "locations_by_region": {
+    "Overworld": [
+      "0366E4C57024B5E1:exdeorum:wooden_hammer:245134766379415009",
+      "52558E9A9B255F2C:Alloy Kiln:5932804878809521964",
+      "0D002DB1FBB8EFA3:farmingforblockheads:market:936798964948725667"
+    ],
+    "The Nether": [
+    ],
+    "The End": [
+    ],
+    "The Aether": [
+    ],
+    "The Undergarden": [
+    ],
+    "The Twilight Forest": [
+    ],
+    "Village": [
+    ],
+    "Nether Fortress": [
+    ],
+    "Pillager Outpost": [
+    ],
+    "Bastion Remnant": [
+    ],
+    "End City": [
+    ]
+  }
 }   
