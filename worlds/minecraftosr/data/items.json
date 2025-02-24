@@ -44,7 +44,8 @@
 		"neutronium_ingot",
 		"energetic_alloy_ingot",
 		"steel_ingot",
-		"pulsating_alloy_ingot"
+		"pulsating_alloy_ingot",
+		"tesseract"
 	],
 	"progression_items": [
 		"Structure Compass (Village)",
@@ -101,7 +102,8 @@
 		"neutronium_ingot": 3,
 		"energetic_alloy_ingot": 3,
 		"steel_ingot": 3,
-		"pulsating_alloy_ingot": 3
+		"pulsating_alloy_ingot": 3,
+		"tesseract": 3
 	},
 	"junk_weights": {
 	    "Legendary Reward": 1,

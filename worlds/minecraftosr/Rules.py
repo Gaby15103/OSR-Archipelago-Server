@@ -135,7 +135,12 @@ def has_steel_ingot(world: "MinecraftOsrWorld", state: CollectionState, player: 
 
 def has_pulsating_alloy_ingot(world: "MinecraftOsrWorld", state: CollectionState, player: int) -> bool:
     return state.has("pulsating alloy ingot", player)
+# COPPER ALLOY NEED COPPER
+def has_copper_alloy_ingot(world: "MinecraftOsrWorld", state: CollectionState, player: int) -> bool:
+    return state.has("copper alloy ingot", player)
 
+def has_tesseract(world: "MinecraftOsrWorld", state: CollectionState, player: int) -> bool:
+    return state.has("tesseract", player)
 
 
 
@@ -570,32 +575,64 @@ def get_rules_lookup(world, player: int):
                         and has_gold_ingots(world,state,player)
                         and state.can_reach_location("41D4504AFE0D80F8:enderio:alloy_smelter:4743504590548074744"),
             "110127114AE2FDA9:enderio:pulsating_photovoltaic_module:1225303528845802921": lambda
-                state: state.can_reach_location("123F1D4B1509DA03:enderio:energetic_photovoltaic_module:1314801824528194051"),
-                        and has_p,
-            "": lambda
-                state: state.can_reach_location(""),
-            "": lambda
-                state: state.can_reach_location(""),
-            "": lambda
-                state: state.can_reach_location(""),
-            "": lambda
-                state: state.can_reach_location(""),
-            "": lambda
-                state: state.can_reach_location(""),
-            "": lambda
-                state: state.can_reach_location(""),
-            "": lambda
-                state: state.can_reach_location(""),
-            "": lambda
-                state: state.can_reach_location(""),
-            "": lambda
-                state: state.can_reach_location(""),
-            "": lambda
-                state: state.can_reach_location(""),
-            "": lambda
-                state: state.can_reach_location(""),
-            "": lambda
-                state: state.can_reach_location(""),
+                state: state.can_reach_location("123F1D4B1509DA03:enderio:energetic_photovoltaic_module:1314801824528194051")
+                        and has_pulsating_alloy_ingot(world,state,player),
+            "783FDD210C8E8C93:enderio:vibrant_photovoltaic_module:8664887342098451603": lambda
+                state: state.can_reach_location("110127114AE2FDA9:enderio:pulsating_photovoltaic_module:1225303528845802921")
+                        and state.can_reach_location("62DE39B1BEF752BA:enderio:octadic_capacitor:7124195096122577594")
+                        and has_vibrant_alloy_ingot(world,state,player),
+            "1467C86B0DB6BF13:ironjetpacks:capacitor:1470364165476892435": lambda
+                state: state.can_reach_location("62DE5FA1C1F76537:immersiveengineering:workbench:7124236808895292727")
+                        and has_redstone_alloy_ingots(world,state,player) and has_copper_alloy_ingot(world,state,player),
+            "0497D308100CEA7E:ironjetpacks:capacitor:330965129217501822": lambda
+                state: state.can_reach_location("1467C86B0DB6BF13:ironjetpacks:capacitor:1470364165476892435"),
+            "39822004CF85610A:ironjetpacks:capacitor:4143909812167860490": lambda
+                state: state.can_reach_location("0497D308100CEA7E:ironjetpacks:capacitor:330965129217501822")
+                        and has_conductive_alloy_ingots(world,state,player),
+            "602AC0D72EC760E3:ironjetpacks:capacitor:6929563007098249443": lambda
+                state: state.can_reach_location("39822004CF85610A:ironjetpacks:capacitor:4143909812167860490"),
+            "16FC2C94F09D2335:ironjetpacks:capacitor:1656247781169111861": lambda
+                state: state.can_reach_location("602AC0D72EC760E3:ironjetpacks:capacitor:6929563007098249443")
+                        and has_energetic_alloy_ingot(world,state,player),
+            "4D1D60A606D7525A:ironjetpacks:capacitor:5556703781440672346": lambda
+                state: state.can_reach_location("16FC2C94F09D2335:ironjetpacks:capacitor:1656247781169111861")
+                        and has_vibrant_alloy_ingot(world,state,player),
+            "3BC52195653A9011:enderio:stirling_generator:4306885544181927953": lambda
+                state: state.can_reach_location("304C3DA255E8BEA1:enderio:basic_capacitor:3480224379485863585")
+                        and has_dark_steel_ingot(world,state,player) and has_gear_mold(world,state,player),
+            "0DA6D312F162E68A:tesseract:tesseract:983705646939694730": lambda
+                state: state.can_reach_location("3BC52195653A9011:enderio:stirling_generator:4306885544181927953")
+                        and state.can_reach_location("45C50B63083377EB:botania:mana_pool:5027437078996285419")
+                        and has_tesseract(world,state,player),
+            "0DCAF4BD7DA81E0C:Dim/Ender Storage:993875762482781708": lambda
+                state: state.can_reach_location("0DA6D312F162E68A:tesseract:tesseract:983705646939694730"),
+            "41D4504AFE0D80F8:enderio:alloy_smelter:4743504590548074744": lambda
+                state: state.can_reach_location("3BC52195653A9011:enderio:stirling_generator:4306885544181927953"),
+            "430434760D2EC53D:enderio:dark_steel_sword:4829042382079968573": lambda
+                state: state.can_reach_location("41D4504AFE0D80F8:enderio:alloy_smelter:4743504590548074744"),
+            "3C5C46275635B639:enderio:xp_obelisk:4349428474897086009": lambda
+                state: state.can_reach_location("41D4504AFE0D80F8:enderio:alloy_smelter:4743504590548074744")
+                        and has_soularium_ingot(world,state,player) and has_energetic_alloy_ingot(world,state,player),
+            "3D039057F963BF8A:enderio:travel_anchor:4396516368764354442": lambda
+                state: state.can_reach_location("3C5C46275635B639:enderio:xp_obelisk:4349428474897086009"),
+            "192279D2382F35DD:enderio:sag_mill:1811143943949071837": lambda
+                state: state.can_reach_location("41D4504AFE0D80F8:enderio:alloy_smelter:4743504590548074744"),
+            "236AB7E3C6AE1F38:enderio:slice_and_splice:2552054327777566520": lambda
+                state: state.can_reach_location("192279D2382F35DD:enderio:sag_mill:1811143943949071837")
+                        and has_soularium_ingot(world,state,player) and has_energetic_alloy_ingot(world,state,player),
+            "321D17BD61F59DE0:enderio:powered_spawner:3611068578380750304": lambda
+                state: state.can_reach_location("236AB7E3C6AE1F38:enderio:slice_and_splice:2552054327777566520")
+                        and has_vibrant_alloy_ingot(world,state,player)
+                        and (state.can_reach_location("77F0DF050A474878:Into the Twilight Forest:8642652897664256120")
+                             or state.can_reach_location("403922E054130670:Into the Nether:4627768438978446960")),
+            "6BE482A7F8998527:enderio:soul_binder:7774482514690278695": lambda
+                state: state.can_reach_location("236AB7E3C6AE1F38:enderio:slice_and_splice:2552054327777566520")
+                        and has_vibrant_alloy_ingot(world,state,player),
+            "3C94C3249C635B5B:enderio:staff_of_travelling:4365328500838849371": lambda
+                state: state.can_reach_location("6BE482A7F8998527:enderio:soul_binder:7774482514690278695"),
+            "3BAAF007B830AD10:enderio:staff_of_levity:4299512710224194832": lambda
+                state: state.can_reach_location("6BE482A7F8998527:enderio:soul_binder:7774482514690278695")
+                        and state.can_reach_location("4632C8C4F1622D5D:Into the End:5058326079679376733"),
 
 
             #Zeta
