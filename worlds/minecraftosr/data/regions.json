@@ -1,12 +1,19 @@
 {
     "regions": [
         ["Menu", ["New World"]],
-        ["Overworld", ["Nether Portal", "End Portal", "Overworld Structure 1", "Overworld Structure 2", "Aether Portal", "Undergarden Portal","Twilight Forest Portal"]],
+        ["Overworld", ["Nether Portal", "End Portal", "Overworld Structure 1", "Overworld Structure 2", "Aether Portal",
+            "Undergarden Portal","Twilight Forest Portal","Tier 1 rocket","Tier 2 rocket","Tier 3 rocket",
+            "Tier 4 rocket"]],
         ["The Nether", ["Nether Structure 1", "Nether Structure 2"]],
         ["The End", ["The End Structure"]],
         ["The Aether", []],
         ["The Undergarden",[]],
         ["The Twilight Forest", []],
+        ["moon", []],
+        ["mars",[]],
+        ["mercury",[]],
+        ["venus", []],
+        ["galacio", []],
         ["Village", []],
         ["Pillager Outpost", []],
         ["Nether Fortress", []],
@@ -19,7 +26,12 @@
         ["End Portal", "The End"],
         ["Aether Portal", "The Aether"],
         ["Undergarden Portal", "The Undergarden"],
-        ["Twilight Forest Portal", "The Twilight Forest"]
+        ["Twilight Forest Portal", "The Twilight Forest"],
+        ["Tier 1 rocket","moon"],
+        ["Tier 2 rocket", "mars"],
+        ["Tier 3 rocket", "venus"],
+        ["Tier 3 rocket", "mercury"],
+        ["Tier 4 rocket","galacio"]
     ],
     "default_connections": [
         ["Overworld Structure 1", "Village"],
