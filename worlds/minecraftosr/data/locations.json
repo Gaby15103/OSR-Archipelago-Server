@@ -789,6 +789,7 @@
       "6C675D88FE73ADE6:mekanism:metallurgic_infuser:7811314921663344102",
       "15189D9DBA11779E:mekanism:energized_smelter:1520138174994675614",
       "67CC9D4B57B81F68:mekanism:crusher:7479526028075343720",
+      "71F4CA2830D6EB69:mekanismgenerators:gas_burning_generator:8211410294570150761",
       "6EB5A813D4088C7E:botania:lexicon:7977467118071876734",
       "3CE059588A2A9A97:patchouli:guide_book:4386604273868905111",
       "1BBAE3C2176C6BA6:Engineer's Tools:1998159807448378278",
@@ -842,7 +843,6 @@
       "089EB2576E939DE2:thermal:dynamo_lapidary:621129887210773986",
       "4C116BC549C3BF61:thermal:dynamo_disenchantment:5481280716576898913",
       "6BCA1F6E5A1F52C0:thermal:energy_cell:7767055066172707520",
-      "52558E9A9B255F2C:Alloy Kiln:5932804878809521964",
       "5C3C77AAFDB39065:Coke Oven:6646318726376558693",
       "1BA88B607F47E8FC:Crude Blast Furnace:1992996081679984892",
       "5EEDD363F71B2FEC:Improved Blast Furnace:6840355835346628588",
@@ -853,6 +853,7 @@
       "3C61B00A5662F884:immersiveengineering:treated_wood_horizontal:4350952273462098052",
       "1F16F7B5039613C3:immersiveengineering:fluid_pipe:2240250221484708803",
       "1B98E6A24B2FD26A:immersiveengineering:sheetmetal_iron:1988592820204589674",
+      "4B61E75F57941931:immersiveengineering:steel_scaffolding_standard:5431877022262761777",
       "0698A40FAC316CF7:mekanism:advanced_control_circuit:475310147907972343",
       "3279F0A5EC784995:mekanism:elite_control_circuit:3637202769505962389",
       "54FF1E782343EAAF:mekanism:ultimate_control_circuit:6124647519583726255",
@@ -874,7 +875,44 @@
       "1C5DB079B5AA1BCD:mekanismgenerators:advanced_solar_generator:2043983842681428941",
       "3895713C1C5AE788:mekanismgenerators:wind_generator:4077289540641548168",
       "42CEB2E7C533F796:mekanismgenerators:bio_generator:4813981760221345686",
-      ""
+      "0A0F1B092A568F5B:ad_astra:launch_pad:724827791208910683",
+      "4658F0B4AEC9C492:ad_astra:coal_generator:5069066039422731410",
+      "691B800BAABBCE37:ad_astra:compressor:7573787985951051319",
+      "1A520CD6F25FE860:ad_astra:oxygen_loader:1896592510405306464",
+      "1BA725CC0AC2D0E2:ad_astra:nasa_workbench:1992602918418829538",
+      "77F16B65C041726F:ad_astra:tier_1_rocket:8642807244662076015",
+      "3267B5D26EB6EDAC:Space Suit:3632071539902836140",
+      "6A2AE7213737A80A:immersiveengineering:plate_iron:7650181046888540170",
+      "1EE80B09837AF1D9:immersiveengineering:plate_steel:2227042151223194073",
+      "238651C98852C456:botania:apothecary_default:2559823364224107606",
+      "254AD3E776A4A6C2:botania:fertilizer:2687193118761330370",
+      "140A6BB74911AF3C:botania:brown_petal:1444085065474748220",
+      "17E874348EBC65E9:botania:light_gray_petal:1722754626551047657",
+      "3ECBDF981EE1ADEC:botania:yellow_petal:4524956095069924844",
+      "0984717AC3E4C46A:botania:white_petal:685797815353656426",
+      "7845C0F597E6BC20:botania:green_petal:8666545218992389152",
+      "7A4707F5D668F55F:botania:cyan_petal:8811019948419249503",
+      "5BF7D180B44F673D:botania:lime_petal:6626995727410095933",
+      "658CF4963978B628:botania:orange_petal:7317492420616697384",
+      "40D505F3A38214FC:botania:red_petal:4671646732445160700",
+      "62E43B019BE82738:botania:purple_petal:7125885388503656248",
+      "551314254FBE6758:botania:pink_petal:6130265668265600856",
+      "00F000B1AE6E31E9:botania:magenta_petal:67554757546226153",
+      "3E2E52EF1565C6FE:botania:black_petal:4480609866089875198",
+      "7CA5E6793BD892A5:botania:blue_petal:8981838440229802661",
+      "140BD22ACE0A9E31:botania:gray_petal:1444479186789637681",
+      "735C356FC487F1B9:botania:light_blue_petal:8312577766373978553",
+      "31A628554F318833:botania:pure_daisy:3577591300858415155",
+      "65029D69C4D7C329:botania:livingrock:7278553025383744297",
+      "45C50B63083377EB:botania:mana_pool:5027437078996285419",
+      "38B38839D9365730:botania:livingwood_log:4085759068993902384",
+      "4A010F0546C95882:botania:mana_spreader:5332559949120231554",
+      "22AEDCCADAFFAC5A:botania:manasteel_ingot:2499177607052897370",
+      "3E8681CB5EAE6368:botania:mana_pylon:4505431187697591144",
+      "41275C2B37848720:botania:terrasteel_ingot:4694822477241812768",
+      "1F26D7D6336C6B0D:botania:natura_pylon:2244718779276487437",
+      "3002A490F28BEF65:botania:elementium_ingot:3459508406225465189",
+      "2F5D8150C3A8C415:botania:gaia_pylon:3413026276496688149"
     ],
     "The Nether": [
       "4140645DC360472A:Enchanter:4701868364847400746",
@@ -905,7 +943,8 @@
       "1D639216999D7353:minecraft:ghast_tear:2117696875558433619",
       "1DD1DCC7A9D37C31:powah:crystal_nitro:2148741247338249265",
       "7671F5CD5D0428F2:thermal:machine_pyrolyzer:8534873031221455090",
-      "28AEB6B18BC853EF:thermal:machine_brewer:2931481281135399919"
+      "28AEB6B18BC853EF:thermal:machine_brewer:2931481281135399919",
+      "79E30F3A54F84EA4:botania:gaia_ingot:8782880441510678180"
     ],
     "The End": [
       "1F2933C86F227F89:mysticalagriculture:awakened_draconium_seeds:2245382825171910537",
@@ -940,9 +979,31 @@
     "The Twilight Forest": [
       "69912119C98D6247:Conquor the Twilight:7606897640244863559"
     ],
+    "moon": [
+      "22221F35326DD805:ad_astra:oxygen_distributor:2459562659837499397",
+      "00B0AA8BE2B0C31C:ad_astra:solar_panel:49727113681486620",
+      "182CA53075F91A01:ad_astra:tier_1_rover:1741948783441811969",
+      "4B5C56B584011078:ad_astra:desh_plate:5430310588305707128",
+      "3427FD33D5880D1B:ad_astra:tier_2_rocket:3758250813131590939"
+    ],
+    "mars": [
+      "721476FC4B99E2C0:Netherite Space Suit:8220326045830210240",
+      "55F91BC03B407F6C:ad_astra:ostrum_plate:6195013274866581356",
+      "11C1BDB53489F2A9:ad_astra:cryo_freezer:1279512355118117545",
+      "5FC1F4C053B4DFB2:ad_astra:ice_shard:6900065210983571378",
+      "18511D1BCCA33A8B:ad_astra:tier_3_rocket:1752213735258405515"
+    ],
+    "mercury": [
+
+    ],
     "venus": [
       "28ADE47BE9ED4B9F:mysticalagriculture:neutronium_seeds:2931250153344813983",
-      "18E8E67F431E99E4:Simple Achievements:1794937885768456676"
+      "18E8E67F431E99E4:Simple Achievements:1794937885768456676",
+      "74D262D220F6AD75:ad_astra:calorite_plate:8417899308144569717",
+      "4A3ED57B133E0F5C:ad_astra:tier_4_rocket:5349948131943255900"
+    ],
+    "galacio": [
+
     ],
     "Village": [
     ],
