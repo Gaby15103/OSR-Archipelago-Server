@@ -12,6 +12,7 @@ from dataclasses import dataclass
 
 class QuestGoal(Choice):
     """Quest required to finish the game."""
+    # possible advancement tier 8 draconic sphere full or maybe 7  9,223,372,036,854,775,807 rf
     display_name = "Objective"
     option_simple_achievement = 0
     option_dragon_egg = 1
