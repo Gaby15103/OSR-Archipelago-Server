@@ -991,7 +991,27 @@
       "09DA42D1300AEF21:industrialforegoing:common_black_hole_unit:709953357485895457",
       "1C4D8135917B74EB:industrialforegoing:common_black_hole_tank:2039428273342739691",
       "6A40A9ED42048DC0:industrialforegoing:pitiful_generator:7656306203009781184",
-      "569F057DEE9840AB:industrialforegoing:mycelial_culinary:6241713646990803115"
+      "569F057DEE9840AB:industrialforegoing:mycelial_culinary:6241713646990803115",
+      "6C5ABCB21F4AD687:Covalence Dust:7807760377215374983",
+      "249E36927538C411:projecte:philosophers_stone:2638606434345468945",
+      "694ED42FA3146EEA:projecte:alchemical_coal:7588235723230441194",
+      "18EB92AEBC23CCC8:projecte:mobius_fuel:1795690155615702216",
+      "7C7509848963F782:projecte:aeternalis_fuel:8968084697823573890",
+      "035D7EEE54AED6E1:projecte:transmutation_table:242489517035935457",
+      "4D8D51291629C01B:redstone_arsenal:flux_metal_block:5588211949543997467",
+      "08E49BD35B88AB59:redstone_arsenal:flux_crossbow:640808379069541209",
+      "641F869574914AB0:redstone_arsenal:flux_bow:7214633104534751920",
+      "5D6289BEC50F8A91:redstone_arsenal:flux_hammer:6729092245687863953",
+      "735D4596340E6B02:redstone_arsenal:flux_excavator:8312876998616574722",
+      "717674BB18DF203E:redstone_arsenal:flux_axe:8175850520462696510",
+      "010C229774F22C63:redstone_arsenal:flux_shovel:75473327655890019",
+      "0D56F9F5F92A22D1:redstone_arsenal:flux_pickaxe:961230405332771537",
+      "1FD4C674E8ACF4A8:redstone_arsenal:flux_sword:2293676315660580008",
+      "1F0F791303414C9F:redstone_arsenal:flux_wrench:2238140662392376479",
+      "1B2809B6F2B4ECA2:redstone_arsenal:flux_fishing_rod:1956824719453121698",
+      "1463D0E842943F8B:redstone_arsenal:flux_sickle:1469247599420915595",
+      "3C392D84AF0B5711:redstone_arsenal:flux_trident:4339549763843872529",
+      "6D28BFB719B857C5:redstone_arsenal:flux_quiver:7865747542334003141"
     ],
     "The Nether": [
       "4140645DC360472A:Enchanter:4701868364847400746",
@@ -1034,7 +1054,15 @@
       "1F4B7FC6646657F3:industrialforegoing:machine_frame_supreme:2255036528493746163",
       "129ACE50C21E79EF:industrialforegoing:black_hole_controller:1340610685345626607",
       "09801AD3826251FF:industrialforegoing:mycelial_magma:684576639088218623",
-      "2E9E5B35927F5A4C:industrialforegoing:mycelial_ender:3359222657714182732"
+      "2E9E5B35927F5A4C:industrialforegoing:mycelial_ender:3359222657714182732",
+      "3082BB769BB97BEC:hostilenetworks:deep_learner:3495562378886085612",
+      "20E4E8939E7021CD:hostilenetworks:sim_chamber:2370275024619708877",
+      "146CF4A0D8FF14D3:hostilenetworks:loot_fabricator:1471820149915849939",
+      "74AC6573C1A806BE:hostilenetworks:blank_data_model:8407206152238532286",
+      "160D692027A53B64:hostilenetworks:prediction_matrix:1589041830356663140",
+      "582381B5E9F65894:hostilenetworks:overworld_prediction:6351062517836830868",
+      "632DBB9D66CB2457:hostilenetworks:nether_prediction:7146574468415693911",
+      "7617CB1F7F502680:hostilenetworks:end_prediction:8509493357080225408"
     ],
     "The End": [
       "1F2933C86F227F89:mysticalagriculture:awakened_draconium_seeds:2245382825171910537",
@@ -1066,7 +1094,14 @@
       "51F3D3ABAD3D00CC:Infinity Armor:5905296270712176844",
       "73FED8E380B82EDE:extendedcrafting:crafting_core:8358356430074949342",
       "710E293C5F362BDA:industrialforegoing:mycelial_halitosis:8146494115231968218",
-      "6BC096C9F0BE3611:industrialforegoing:mycelial_netherstar:7764371551658325521"
+      "6BC096C9F0BE3611:industrialforegoing:mycelial_netherstar:7764371551658325521",
+      "4E39823E3BB2A755:projecte:alchemical_chest:5636679612432033621",
+      "61E14F41995942B4:projecte:white_alchemical_bag:7053005634603139764",
+      "5B1AD78B32132907:projecte:condenser_mk1:6564796399686461703",
+      "2CD626E3DA24914E:projecte:condenser_mk2:3230812542744170830",
+      "60331AC07AD1EBF5:projecte:transmutation_tablet:6931913665449946101",
+      "46DCFABCE6CA89BC:projectexpansion:transmutation_interface:5106231766764128700",
+      "283D4AE04F36E7DF:redstone_arsenal:flux_elytra:2899556062358595551"
     ],
     "The Aether": [
       "51A0F9A5FD72B84C:Dungeon Master:5881975604662941772",
@@ -1105,7 +1140,15 @@
       "28ADE47BE9ED4B9F:mysticalagriculture:neutronium_seeds:2931250153344813983",
       "18E8E67F431E99E4:Simple Achievements:1794937885768456676",
       "74D262D220F6AD75:ad_astra:calorite_plate:8417899308144569717",
-      "4A3ED57B133E0F5C:ad_astra:tier_4_rocket:5349948131943255900"
+      "4A3ED57B133E0F5C:ad_astra:tier_4_rocket:5349948131943255900",
+      "6BE7EA49DC2FA6D2:projecte:dark_matter:7775440884626073298",
+      "2DA0BD387098BB09:projecte:red_matter:3287835778085337865",
+      "7DFCD91873E59B94:projecte:dm_sword:9078369647918947220",
+      "3FC496674B2D2961:projecte:rm_sword:4594962890211797345",
+      "721A33A024056D36:projecte:rm_katar:8221940832610381110",
+      "558C2A6AAA467ED1:projecte:dm_pick:6164348627575013073",
+      "2213ACF90E286069:projecte:rm_pick:2455496407531413609",
+      "721B545DEB60BCBD:projecte:rm_morning_star:8222258307052649661"
     ],
     "galacio": [
 
