@@ -949,7 +949,29 @@
       "3BCA4E8A93D6B49E:Draconic Fusion Crafting:4308342350626075806",
       "4DDF690FD8CA4D56:draconicevolution:wyvern_crafting_injector:5611319177509490006",
       "601002BDDC947ABD:draconicevolution:wyvern_chestpiece:6922035641741245117",
-      "283C06398F6AAF86:Automation!:2899199104408792966"
+      "283C06398F6AAF86:Automation!:2899199104408792966",
+      "431D954D3418BF6F:powah:aerial_pearl:4836185733684838255",
+      "6D70C11E6989DFBC:powah:player_aerial_pearl:7886015283889561532",
+      "545FA0E3602EDE82:Wireless Player Power:6079754920405163650",
+      "1E2ED0015185D23E:Wireless Power!:2174904374147797566",
+      "4B09FF0A1DB56319:powah:energy_hopper_starter:5407133246548173593",
+      "1EDC66EC5016C09E:powah:energy_discharger_starter:2223765481156165790",
+      "4D2125287B8D730D:powah:furnator_starter:5557764270953689869",
+      "3FB9FD00EF091C52:powah:magmator_starter:4591979475533110354",
+      "3C917DD1175757FB:powah:thermo_generator_starter:4364407850891958267",
+      "0C0743BB7BBBB11B:powah:solar_panel_starter:866735925805953307",
+      "499DEBE64BE4FAA6:powah:reactor_starter:5304655310460615334",
+      "1755A85B0F92464A:Hardened:1681435144949483082",
+      "09A076E82128DC19:Blazing:693685081975872537",
+      "72461EE6B85195DF:Niotic:8234302944977196511",
+      "1E2B4C7819C153C0:Spirited:2173915323848283072",
+      "057F887839D3B028:powah:battery_starter:396185342179520552",
+      "39BB2C47B2611FB1:powah:battery_basic:4159967367253794737",
+      "38AA05C643E2D4FF:powah:battery_hardened:4083082361265378559",
+      "272874C4E29A97D3:powah:battery_blazing:2821633555511810003",
+      "18884245807D016C:powah:battery_niotic:1767735720018772332",
+      "3F9197AAD4C688A5:powah:battery_spirited:4580609055982520485",
+      ""
     ],
     "The Nether": [
       "4140645DC360472A:Enchanter:4701868364847400746",
@@ -986,7 +1008,8 @@
       "4C0FC73E751AC347:extendedcrafting:ender_catalyst:5480818342599770951",
       "3357F34BE165ACBC:extendedcrafting:enhanced_ender_catalyst:3699693126137785532",
       "3F271262B3C6BE36:extendedcrafting:crystaltine_catalyst:4550626163613417014",
-      ""
+      "2D3DEBC427EEF742:Nitro:3260020933002196802",
+      "4F9E0FF0FDC4AFF9:powah:battery_nitro:5737040503040684025"
     ],
     "The End": [
       "1F2933C86F227F89:mysticalagriculture:awakened_draconium_seeds:2245382825171910537",

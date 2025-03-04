@@ -54,7 +54,8 @@
 		"constantan ingot",
 		"bronze ingot",
 		"refined obsidian ingot",
-		"manasteel ingot"
+		"manasteel ingot",
+		"graphite bar"
 	],
 	"progression_items": [
 		"Structure Compass (Village)",
@@ -110,7 +111,8 @@
 		"constantan ingot",
 		"bronze ingot",
 		"refined obsidian ingot",
-		"manasteel ingot"
+		"manasteel ingot",
+		"graphite bar"
 	],
 	"useful_items": [
 		"Sharpness III Book",
@@ -170,7 +172,8 @@
 		"constantan ingot": 3,
 		"bronze ingot": 3,
 		"refined obsidian ingot": 3,
-		"manasteel ingot": 3
+		"manasteel ingot": 3,
+		"graphite bar": 3
 	},
 	"junk_weights": {
 	    "Legendary Reward": 1,
