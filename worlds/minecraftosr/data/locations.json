@@ -980,7 +980,18 @@
       "12EDAA9CA224D529:bigreactors:ludicrite_block:1363933851875071273",
       "4C60C76148FDA511:bigreactors:ridiculite_block:5503617965297083665",
       "4DD6781AF23A36CE:bigreactors:inanite_block:5608802443064915662",
-      "187CE1DC0DC4AF2D:bigreactors:insanite_block:1764533489262440237"
+      "187CE1DC0DC4AF2D:bigreactors:insanite_block:1764533489262440237",
+      "47C0A4FE9AA357A8:industrialforegoing:machine_frame_pity:5170313785644373928",
+      "715D790B9529BA88:industrialforegoing:machine_frame_simple:8168818389774088840",
+      "21B24ABB821326B6:industrialforegoing:fluid_extractor:2428085318307751606",
+      "01AB1445EBDED5F2:industrialforegoing:latex_processing_unit:120212105597998578",
+      "36C9019C18E3D598:industrialforegoing:dryrubber:3947688318311060888",
+      "4C20760BE5CE7796:industrialforegoing:plastic:5485514139609495446",
+      "0E8AEDBF4367D34D:industrialforegoing:dissolution_chamber:1047911269042475853",
+      "09DA42D1300AEF21:industrialforegoing:common_black_hole_unit:709953357485895457",
+      "1C4D8135917B74EB:industrialforegoing:common_black_hole_tank:2039428273342739691",
+      "6A40A9ED42048DC0:industrialforegoing:pitiful_generator:7656306203009781184",
+      "569F057DEE9840AB:industrialforegoing:mycelial_culinary:6241713646990803115"
     ],
     "The Nether": [
       "4140645DC360472A:Enchanter:4701868364847400746",
@@ -1018,7 +1029,12 @@
       "3357F34BE165ACBC:extendedcrafting:enhanced_ender_catalyst:3699693126137785532",
       "3F271262B3C6BE36:extendedcrafting:crystaltine_catalyst:4550626163613417014",
       "2D3DEBC427EEF742:Nitro:3260020933002196802",
-      "4F9E0FF0FDC4AFF9:powah:battery_nitro:5737040503040684025"
+      "4F9E0FF0FDC4AFF9:powah:battery_nitro:5737040503040684025",
+      "71AFD1B1BAA2D468:industrialforegoing:machine_frame_advanced:8191996808480871528",
+      "1F4B7FC6646657F3:industrialforegoing:machine_frame_supreme:2255036528493746163",
+      "129ACE50C21E79EF:industrialforegoing:black_hole_controller:1340610685345626607",
+      "09801AD3826251FF:industrialforegoing:mycelial_magma:684576639088218623",
+      "2E9E5B35927F5A4C:industrialforegoing:mycelial_ender:3359222657714182732"
     ],
     "The End": [
       "1F2933C86F227F89:mysticalagriculture:awakened_draconium_seeds:2245382825171910537",
@@ -1048,7 +1064,9 @@
       "0B98823BEBCD00D1:Chaos Shard Duplication:835560924747989201",
       "030AD281CFAFB320:Infinity Tools:219218986857902880",
       "51F3D3ABAD3D00CC:Infinity Armor:5905296270712176844",
-      "73FED8E380B82EDE:extendedcrafting:crafting_core:8358356430074949342"
+      "73FED8E380B82EDE:extendedcrafting:crafting_core:8358356430074949342",
+      "710E293C5F362BDA:industrialforegoing:mycelial_halitosis:8146494115231968218",
+      "6BC096C9F0BE3611:industrialforegoing:mycelial_netherstar:7764371551658325521"
     ],
     "The Aether": [
       "51A0F9A5FD72B84C:Dungeon Master:5881975604662941772",
