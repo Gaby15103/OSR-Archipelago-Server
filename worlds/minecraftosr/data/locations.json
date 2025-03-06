@@ -935,7 +935,6 @@
       "429C156DA815B9AC:extendedcrafting:elite_catalyst:4799734863585720748",
       "15C0A3A1B2535ECA:extendedcrafting:ultimate_catalyst:1567432585201802954",
       "0CF8AF74D606289A:extendedcrafting:redstone_catalyst:934689839021172890",
-      "59559F76CB02926B:extendedcrafting:enhanced_redstone_catalyst:6437226574956892779",
       "621446C746165507:extendedcrafting:flux_crafter:7067351536939455751",
       "6C636869DB9AD89F:extendedcrafting:advanced_table:7810200982655785119",
       "49C3E3CAC20DF7BC:extendedcrafting:elite_table:5315342445205911484",
@@ -991,6 +990,7 @@
       "09DA42D1300AEF21:industrialforegoing:common_black_hole_unit:709953357485895457",
       "1C4D8135917B74EB:industrialforegoing:common_black_hole_tank:2039428273342739691",
       "6A40A9ED42048DC0:industrialforegoing:pitiful_generator:7656306203009781184",
+      "30456C23D0367E64:industrialforegoing:mycelial_furnace:3478305188286463588",
       "569F057DEE9840AB:industrialforegoing:mycelial_culinary:6241713646990803115",
       "6C5ABCB21F4AD687:Covalence Dust:7807760377215374983",
       "249E36927538C411:projecte:philosophers_stone:2638606434345468945",
@@ -1011,7 +1011,25 @@
       "1B2809B6F2B4ECA2:redstone_arsenal:flux_fishing_rod:1956824719453121698",
       "1463D0E842943F8B:redstone_arsenal:flux_sickle:1469247599420915595",
       "3C392D84AF0B5711:redstone_arsenal:flux_trident:4339549763843872529",
-      "6D28BFB719B857C5:redstone_arsenal:flux_quiver:7865747542334003141"
+      "6D28BFB719B857C5:redstone_arsenal:flux_quiver:7865747542334003141",
+      "7809066C248C37AD:Digital Storage:8649451620881151917",
+      "20B890FD3E291F76:Silicon:2357793822272462710",
+      "60B7F429BAE6E5EF:Gold:6969307408445662703",
+      "50A2E2E8521749A7:Diamond:5810455956698909095",
+      "1A3FA59451D43379:Controller:1891412424965501817",
+      "274C14C7C62D48A8:Crafting:2831661113965103272",
+      "4FBABE3D59B8E9B5:Drive:5745113445372062133",
+      "7B2BB48F9AB28BC6:1k Storage:8875386019532409798",
+      "357543CD8A5D9DB6:4k Storage:3852059606354075062",
+      "080262166E7887C3:16k Storage:577131550739040195",
+      "2C512D6C9BB46EE2:64k Storage:3193383555274403554",
+      "2569A126CB0A8950:256k Storage:2695863039945247056",
+      "07E82AE7818BF3E8:1M Storage:569752526661612520",
+      "184E912DACA79A0A:4M Storage:1751496930449922570",
+      "268AB8819A2C91A0:16M Storage:2777234987004236192",
+      "5E98432CCEF5AF15:64M Storage:6816271895755075349",
+      "30C0E7E9D6D89F39:256M Storage:3513062700866903865",
+      "544305340A781906:Upgrades:6071702443697641734"
     ],
     "The Nether": [
       "4140645DC360472A:Enchanter:4701868364847400746",
@@ -1062,7 +1080,10 @@
       "160D692027A53B64:hostilenetworks:prediction_matrix:1589041830356663140",
       "582381B5E9F65894:hostilenetworks:overworld_prediction:6351062517836830868",
       "632DBB9D66CB2457:hostilenetworks:nether_prediction:7146574468415693911",
-      "7617CB1F7F502680:hostilenetworks:end_prediction:8509493357080225408"
+      "7617CB1F7F502680:hostilenetworks:end_prediction:8509493357080225408",
+      "23093BFA316B6B83:Even More Storage:2524615011874859907",
+      "2E3936DE3FD51B85:Infinity Booster:3330753727598762885",
+      "6668D3FEB6B195C4:Dimension Card:7379381080386803140"
     ],
     "The End": [
       "1F2933C86F227F89:mysticalagriculture:awakened_draconium_seeds:2245382825171910537",
@@ -1118,6 +1139,11 @@
     ],
     "The Twilight Forest": [
       "69912119C98D6247:Conquor the Twilight:7606897640244863559"
+
+    ],
+    "The Twilight Forest and mars": [
+      "2614ECA52DB256A6:Wireless Crafting:2744078267155895974",
+      "1F0C090AFA116B94:Universal Wireless:2237173057646062484"
     ],
     "moon": [
       "22221F35326DD805:ad_astra:oxygen_distributor:2459562659837499397",

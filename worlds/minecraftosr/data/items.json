@@ -55,7 +55,9 @@
 		"bronze ingot",
 		"refined obsidian ingot",
 		"manasteel ingot",
-		"graphite bar"
+		"graphite bar",
+		"fluix crystal",
+		"basic processor"
 	],
 	"progression_items": [
 		"Structure Compass (Village)",
@@ -112,7 +114,9 @@
 		"bronze ingot",
 		"refined obsidian ingot",
 		"manasteel ingot",
-		"graphite bar"
+		"graphite bar",
+		"fluix crystal",
+		"basic processor"
 	],
 	"useful_items": [
 		"Sharpness III Book",
@@ -173,7 +177,9 @@
 		"bronze ingot": 3,
 		"refined obsidian ingot": 3,
 		"manasteel ingot": 3,
-		"graphite bar": 3
+		"graphite bar": 3,
+		"fluix crystal": 3,
+		"basic processor": 4
 	},
 	"junk_weights": {
 	    "Legendary Reward": 1,
