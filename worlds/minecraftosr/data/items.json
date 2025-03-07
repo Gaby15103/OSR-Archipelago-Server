@@ -21,16 +21,16 @@
 		"item conduit",
 		"fluid conduit",
 		"redstone ingot",
-		"dark_steel ingot",
+		"dark steel ingot",
 		"soulium ingot",
 		"ender eye",
-		"thermal machine_frame",
+		"thermal machine frame",
 		"soularium ingot",
 		"gear mold",
 		"master infusion crystal",
 		"infusion crystal",
-		"black iron_ingot",
-		"basic crafting_table",
+		"black iron ingot",
+		"basic crafting table",
 		"inferium growth accelerator",
 		"prudentium growth accelerator",
 		"tertium growth accelerator",
@@ -57,7 +57,17 @@
 		"manasteel ingot",
 		"graphite bar",
 		"fluix crystal",
-		"basic processor"
+		"basic processor",
+		"Legendary Reward",
+		"Relic Reward",
+		"Epic Reward",
+		"Basic Reward",
+		"Artifact Reward",
+		"Greater Reward",
+		"Good Reward",
+		"Random Reward",
+		"Decent Reward",
+		"Okay Reward"
 	],
 	"progression_items": [
 		"Structure Compass (Village)",
@@ -119,9 +129,7 @@
 		"basic processor"
 	],
 	"useful_items": [
-		"Sharpness III Book",
-		"Looting III Book",
-		"Infinity Book"
+
 	],
 	"trap_items": [
 		"Bee Trap"

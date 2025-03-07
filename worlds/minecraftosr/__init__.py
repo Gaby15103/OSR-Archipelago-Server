@@ -135,6 +135,8 @@ class MinecraftOsrWorld(World):
 
     def create_items(self) -> None:
         self.multiworld.itempool += build_item_pool(self)
+        for item in self.multiworld.itempool:
+            print(item)
 
     set_rules = set_rules
 

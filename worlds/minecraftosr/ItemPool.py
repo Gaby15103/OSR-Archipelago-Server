@@ -24,7 +24,6 @@ def build_item_pool(world: "MinecraftOsrWorld") -> List[Item]:
 
 	itempool = []
 	total_location_count = len(multiworld.get_unfilled_locations(player))
-
 	required_pool = Constants.item_info["required_pool"]
 
 	# Add required progression items
