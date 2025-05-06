@@ -66,6 +66,21 @@ class MinecraftOsrWorld(World):
 
     def _get_mc_data(self) -> Dict[str, Any]:
         exits = [connection[0] for connection in Constants.region_info["default_connections"]]
+        quest_mapping = {
+            0: "18E8E67F431E99E4:Simple Achievements:1794937885768456676",
+            1: "46F450DDEAECE702:minecraft:dragon_egg:5112800391031744258",
+            2: "0B4FE52E8C83C177:constructionwand:infinity_wand:815122045666050423",
+            3: "69912119C98D6247:Conquor the Twilight:7606897640244863559",
+            4: "79E30F3A54F84EA4:botania:gaia_ingot:8782880441510678180",
+            5: "187CE1DC0DC4AF2D:bigreactors:insanite_block:1764533489262440237",
+            6: "2F89C9A81F049F60:betterfurnacesreforged:ultimate_forge:3425490715504058208",
+            7: "4A3ED57B133E0F5C:ad_astra:tier_4_rocket:5349948131943255900",
+            8: "46DCFABCE6CA89BC:projectexpansion:transmutation_interface:5106231766764128700",
+            9: "2218FD98BD04A52E:draconicevolution:chaos_shard:2456992429178660142",
+            10: "725C86A23081A0F6:avaritia:infinity_ingot:8240609449337790710",
+            11: "030AD281CFAFB320:Infinity Tools:219218986857902880",
+            12: "51F3D3ABAD3D00CC:Infinity Armor:5905296270712176844"
+        }
         return {
             'world_seed': self.random.getrandbits(32),
             'seed_name': self.multiworld.seed_name,
@@ -73,7 +88,7 @@ class MinecraftOsrWorld(World):
             'player_id': self.player,
             'client_version': client_version,
             'structures': {exit: self.multiworld.get_entrance(exit, self.player).connected_region.name for exit in exits},
-            'quest_goal': self.options.quest_goal.value,
+            'quest_goal': quest_mapping.get(self.options.quest_goal.value),
             'MC35': bool(self.options.send_defeated_mobs.value),
             'death_link': bool(self.options.death_link.value),
             'starting_items': json.dumps(self.options.starting_items.value),
@@ -135,8 +150,6 @@ class MinecraftOsrWorld(World):
 
     def create_items(self) -> None:
         self.multiworld.itempool += build_item_pool(self)
-        for item in self.multiworld.itempool:
-            print(item)
 
     set_rules = set_rules
 

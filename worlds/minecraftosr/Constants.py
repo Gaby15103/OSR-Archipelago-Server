@@ -20,6 +20,11 @@ item_name_to_id["Bee Trap"] = item_id_offset + 100 # historical reason
 location_info = load_data_file("locations.json")
 location_name_to_id = {name: location_id_offset + index \
     for index, name in enumerate(location_info["all_locations"])}
+# Open the file for writing
+with open("locations.txt", "w") as file:
+    for name, index in location_name_to_id.items():
+        # Write each location to the file in the desired format
+        file.write(f'put("{name}", "{index}");\n')
 
 exclusion_info = load_data_file("excluded_locations.json")
 

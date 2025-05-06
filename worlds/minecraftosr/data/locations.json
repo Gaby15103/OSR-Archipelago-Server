@@ -446,7 +446,6 @@
     "1BE1BDAF0936A984:cyclic:apple_ender:2009095468255455620",
     "3D514FFE4B4FABD0:mysticalagriculture:uraninite_seeds:4418400663030967248",
     "1111A4212E59B734:mysticalagriculture:imperium_essence:1229944635667363636",
-    "0F3AA0A451B53B4B:Pack Mode:1097366086824049483",
     "234E84DB362CCB37:mysticalagradditions:awakened_supremium_paxel:2544116916552518455",
     "0E5632983BB97532:mob_grinding_utils:saw:1033068793946535218",
     "321D17BD61F59DE0:enderio:powered_spawner:3611068578380750304",
@@ -625,7 +624,8 @@
     "6C675D88FE73ADE6:mekanism:metallurgic_infuser:7811314921663344102",
     "725C86A23081A0F6:avaritia:infinity_ingot:8240609449337790710",
     "0299EC5E270E0F04:exdeorum:golden_hammer:187440748638899972",
-    "04846D1F54DF981C:mysticalagriculture:infusion_altar:325505054412871708"
+    "04846D1F54DF981C:mysticalagriculture:infusion_altar:325505054412871708",
+    "18E8E67F431E99E4:Simple Achievements:1794937885768456676"
   ],
   "locations_by_region": {
     "Overworld": [
@@ -1002,7 +1002,25 @@
       "4026905FACEEB1F2:mysticalagradditions:prudentium_paxel:4622540808140009970",
       "59FF5F7CF04A2152:mysticalagradditions:tertium_paxel:6485006978648777042",
       "1D6D696FBEE501E7:mysticalagradditions:imperium_paxel:2120466928226337255",
-      "04E06C50ED42364D:mysticalagradditions:supremium_paxel:351399865768621645"
+      "04E06C50ED42364D:mysticalagradditions:supremium_paxel:351399865768621645",
+      "50D771A1B08295B6:cyclic:anvil:5825249582292047286",
+      "71D96D724B65F94E:cyclic:ender_bag:8203708533890742606",
+      "6DAAAA21A430F540:cyclic:lunchbox:7902315557640271168",
+      "6F1CAF83608EAB3E:cyclic:disenchanter:8006467216353438526",
+      "153F4EBD5928273F:cyclic:soundproofing:1531028973480847167",
+      "4176CCCBE76268DF:cyclic:teleport_wand:4717182835849586911",
+      "4CACD99EBC5734B6:cyclic:fire_killer:5525030118664647862",
+      "7E48F8220B813044:cyclic:apple_diamond:9099795872207679556",
+      "72DFDF6EEEE0F329:cyclic:apple_prismarine:8277580307677377321",
+      "587E8FA1B3ACD6E3:cyclic:apple_honey:6376692047070156515",
+      "2E1AF16970EDF2BB:cyclic:apple_iron:3322233110307664571",
+      "4F9D02ABF81633F3:cyclic:apple_chocolate:5736744437964747763",
+      "2EF5F87F9ED8BDF9:cyclic:apple_lofty_stature:3383883922048335353",
+      "1BE1BDAF0936A984:cyclic:apple_ender:2009095468255455620",
+      "522ABEF3993C693B:cyclic:apple_bone:5920754613589141819",
+      "39C5318243BD3B15:cyclic:apple_chorus:4162787866125875989",
+      "761298D0F39BC4EE:cyclic:apple_lapis:8508030669263979758",
+      "728C5C3D9B9A4343:cyclic:apple_emerald:8254073636736615235"
     ],
     "The Nether": [
       "4140645DC360472A:Enchanter:4701868364847400746",
@@ -1112,7 +1130,8 @@
       "694ED42FA3146EEA:projecte:alchemical_coal:7588235723230441194",
       "18EB92AEBC23CCC8:projecte:mobius_fuel:1795690155615702216",
       "7C7509848963F782:projecte:aeternalis_fuel:8968084697823573890",
-      "035D7EEE54AED6E1:projecte:transmutation_table:242489517035935457"
+      "035D7EEE54AED6E1:projecte:transmutation_table:242489517035935457",
+      "01A19C42EDC32E35:cyclic:heart:117546876559109685"
     ],
     "The End": [
       "1F2933C86F227F89:mysticalagriculture:awakened_draconium_seeds:2245382825171910537",
@@ -1147,7 +1166,8 @@
       "6BC096C9F0BE3611:industrialforegoing:mycelial_netherstar:7764371551658325521",
       "4E39823E3BB2A755:projecte:alchemical_chest:5636679612432033621",
       "61E14F41995942B4:projecte:white_alchemical_bag:7053005634603139764",
-      "283D4AE04F36E7DF:redstone_arsenal:flux_elytra:2899556062358595551"
+      "283D4AE04F36E7DF:redstone_arsenal:flux_elytra:2899556062358595551",
+      "58824BBCD74179F7:hangglider:reinforced_hang_glider:6377743296747370999"
     ],
     "The Aether": [
       "51A0F9A5FD72B84C:Dungeon Master:5881975604662941772",
@@ -1160,7 +1180,8 @@
       "0332B6BA96B14AD1:undergarden:cloggrum_sword:230447443457690321",
       "009DC6680176855E:undergarden:utherium_sword:44409721347016030",
       "4ED75332CE21FB62:undergarden:forgotten_sword:5681100932622973794",
-      "7995042AD8710998:undergarden:froststeel_sword:8760913232185592216"
+      "7995042AD8710998:undergarden:froststeel_sword:8760913232185592216",
+      "7833ADC8AD653FEA:Transfer Nodes:8661457585777754090"
     ],
     "The Twilight Forest": [
       "69912119C98D6247:Conquor the Twilight:7606897640244863559"
@@ -1187,6 +1208,7 @@
       "46DCFABCE6CA89BC:projectexpansion:transmutation_interface:5106231766764128700"
     ],
     "The End and venus": [
+      "18E8E67F431E99E4:Simple Achievements:1794937885768456676"
     ],
     "moon": [
       "22221F35326DD805:ad_astra:oxygen_distributor:2459562659837499397",
