@@ -1020,7 +1020,16 @@
       "522ABEF3993C693B:cyclic:apple_bone:5920754613589141819",
       "39C5318243BD3B15:cyclic:apple_chorus:4162787866125875989",
       "761298D0F39BC4EE:cyclic:apple_lapis:8508030669263979758",
-      "728C5C3D9B9A4343:cyclic:apple_emerald:8254073636736615235"
+      "728C5C3D9B9A4343:cyclic:apple_emerald:8254073636736615235",
+      "673A9F05CA581D87:angelblockrenewed:angel_block:7438432581774220679",
+      "5051F80ECA9FBFB9:Varied Block Types:5787679738560495545",
+      "2315AD5F89763FA7:Painting Machines:2528117391678128039",
+      "63C16B115A6500B6:chipped:carpenters_table:7188144202535207094",
+      "05277533590463A1:chipped:mason_table:371394357678597025",
+      "1AA5CB18794F41EC:chipped:glassblower:1920164122118275564",
+      "78F681277CF86ACC:chipped:loom_table:8716296135422536396",
+      "2E4FB49A2DD9A513:chipped:botanist_workbench:3337084423192028435",
+      "70FC8BA6D4E1C08E:chipped:tinkering_table:8141535775031410830"
     ],
     "The Nether": [
       "4140645DC360472A:Enchanter:4701868364847400746",
@@ -1131,7 +1140,8 @@
       "18EB92AEBC23CCC8:projecte:mobius_fuel:1795690155615702216",
       "7C7509848963F782:projecte:aeternalis_fuel:8968084697823573890",
       "035D7EEE54AED6E1:projecte:transmutation_table:242489517035935457",
-      "01A19C42EDC32E35:cyclic:heart:117546876559109685"
+      "01A19C42EDC32E35:cyclic:heart:117546876559109685",
+      "326BB3D7D7F1C495:chipped:alchemy_bench:3633195264026723477"
     ],
     "The End": [
       "1F2933C86F227F89:mysticalagriculture:awakened_draconium_seeds:2245382825171910537",
