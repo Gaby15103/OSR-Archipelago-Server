@@ -1037,7 +1037,19 @@
       "408BA52DFB3A0066:rftoolsstorage:storage_module0:4650992657097162854",
       "2CEBBA5BA48CB6EE:rftoolsstorage:storage_module1:3236885659961308910",
       "37C69DFAEE126C2A:rftoolsstorage:storage_module2:4019073418536315946",
-      "4AB2114871FFCEDC:rftoolsstorage:storage_module3:5382383507509071580"
+      "4AB2114871FFCEDC:rftoolsstorage:storage_module3:5382383507509071580",
+      "0A0CAFC53A9F49CA:solarflux:efficiency_upgrade:724146901726742986",
+      "2761EA6245F64645:solarflux:transfer_rate_upgrade:2837806948021585477",
+      "5E95CB10F2939C12:solarflux:capacity_upgrade:6815576884744789010",
+      "4F0C9F7740D46013:solarflux:traversal_upgrade:5696102963254419475",
+      "724EDABFE1DBE350:solarflux:dispersive_upgrade:8236761286170108752",
+      "47CDA15E8566561B:solarflux:block_charging_upgrade:5173968974255642139",
+      "72B30CE3A543089C:solarflux:furnace_upgrade:8264963913024735388",
+      "41C74A18C8B756B1:solarflux:sp_2:4739838603137865393",
+      "1BB90181D2B61AD6:solarflux:sp_3:1997629566813084374",
+      "271B755051628B5B:solarflux:sp_4:2817974979673623387",
+      "6597118149478700:solarflux:sp_5:7320338966291908352",
+      "07ABF96BA0FFD5BE:solarflux:sp_6:552809619940955582"
     ],
     "The Nether": [
       "4140645DC360472A:Enchanter:4701868364847400746",
@@ -1189,7 +1201,11 @@
       "4E39823E3BB2A755:projecte:alchemical_chest:5636679612432033621",
       "61E14F41995942B4:projecte:white_alchemical_bag:7053005634603139764",
       "283D4AE04F36E7DF:redstone_arsenal:flux_elytra:2899556062358595551",
-      "58824BBCD74179F7:hangglider:reinforced_hang_glider:6377743296747370999"
+      "58824BBCD74179F7:hangglider:reinforced_hang_glider:6377743296747370999",
+      "2790481898D18B77:solarflux:sp_7:2850857834605808503",
+      "668D33D154B79414:solarflux:sp_8:7389619537747350548",
+      "0824649D9D165302:solarflux:sp_de.wyvern:586704479573136130",
+      "2E3395E305C41745:solarflux:sp_de.draconic:3329169351843780421"
     ],
     "The Aether": [
       "51A0F9A5FD72B84C:Dungeon Master:5881975604662941772",
@@ -1206,8 +1222,10 @@
       "7833ADC8AD653FEA:Transfer Nodes:8661457585777754090"
     ],
     "The Twilight Forest": [
-      "69912119C98D6247:Conquor the Twilight:7606897640244863559"
-
+      "69912119C98D6247:Conquor the Twilight:7606897640244863559",
+      "09C3686C05D82DB4:solarflux:sp_tf.fiery:703520779963739572",
+      "0E72F3DC49ECCFAC:solarflux:sp_tf.carminite:1041162591334617004",
+      "6AA00CEA49650CA4:solarflux:twilightforest/twilight_upgrade:7683155164687305892"
     ],
     "The Twilight Forest and mars": [
       "2614ECA52DB256A6:Wireless Crafting:2744078267155895974",
@@ -1227,7 +1245,8 @@
       "5B1AD78B32132907:projecte:condenser_mk1:6564796399686461703",
       "2CD626E3DA24914E:projecte:condenser_mk2:3230812542744170830",
       "60331AC07AD1EBF5:projecte:transmutation_tablet:6931913665449946101",
-      "46DCFABCE6CA89BC:projectexpansion:transmutation_interface:5106231766764128700"
+      "46DCFABCE6CA89BC:projectexpansion:transmutation_interface:5106231766764128700",
+      ""
     ],
     "The End and venus": [
       "18E8E67F431E99E4:Simple Achievements:1794937885768456676"
