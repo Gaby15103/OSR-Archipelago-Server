@@ -260,7 +260,6 @@
     "6D28BFB719B857C5:redstone_arsenal:flux_quiver:7865747542334003141",
     "4C20760BE5CE7796:industrialforegoing:plastic:5485514139609495446",
     "6F25BC39A243FB15:enderio:basic_capacitor_bank:8009014468069817109",
-    "026968D0C9F3EEF3:Chaos Guardian:173785306581167859",
     "4109CFAABCC43103:mob_grinding_utils:tank:4686505219474075907",
     "37D1B059E4217163:exdeorum:iron_hammer:4022189842344538467",
     "0632775165BACE5A:bigreactors:graphite_ingot:446550504545898074",
@@ -369,7 +368,6 @@
     "2761EA6245F64645:solarflux:transfer_rate_upgrade:2837806948021585477",
     "17DCD0325F76FF0C:mysticalagriculture:inferium_essence:1719478072517263116",
     "2E9E5B35927F5A4C:industrialforegoing:mycelial_ender:3359222657714182732",
-    "2CD899D0FF981FE6:Coin Shop:3231501855558737894",
     "16FC2C94F09D2335:ironjetpacks:capacitor:1656247781169111861",
     "1BBED5317DB102D4:mysticalagriculture:niotic_crystal_seeds:1999269693137945300",
     "74076796EE6A84BE:bigreactors:yellorium_ingot:8360765131179328702",
@@ -396,7 +394,7 @@
     "6597118149478700:solarflux:sp_5:7320338966291908352",
     "225CCF5803299B49:thermal:machine_sawmill:2476081872064060233",
     "0698A40FAC316CF7:mekanism:advanced_control_circuit:475310147907972343",
-    "77D847CEB6743643:thermal:machine_crafter:8635731238632830531",
+    "77D847CEB6743643:thermal:machine_crafter:863573123863283053",
     "080262166E7887C3:16k Storage:577131550739040195",
     "63C16B115A6500B6:chipped:carpenters_table:7188144202535207094",
     "735D4596340E6B02:redstone_arsenal:flux_excavator:8312876998616574722",
@@ -415,7 +413,7 @@
     "7AC647D823CD6523:immersiveengineering:light_engineering:8846837511655089443",
     "69021BE4507E3022:ironchests:diamond_chest:7566640991352795170",
     "1BA725CC0AC2D0E2:ad_astra:nasa_workbench:1992602918418829538",
-    "56269978214E1D5A:patchouli:guide_book:62078178770D3C589B358447AB610700122",
+    "56269978214E1D5A:patchouli:guide_book:6207817877610700122",
     "4FBABE3D59B8E9B5:Drive:5745113445372062133",
     "55F91BC03B407F6C:ad_astra:ostrum_plate:6195013274866581356",
     "46DCFABCE6CA89BC:projectexpansion:transmutation_interface:5106231766764128700",
@@ -431,7 +429,6 @@
     "09801AD3826251FF:industrialforegoing:mycelial_magma:684576639088218623",
     "3FA2C4EFEA686EF2:botanypots:terracotta_botany_pot:4585443905325526770",
     "1293A7D5A06C73C7:mekanismtools:refined_obsidian_paxel:1338598050220504007",
-    "6075AD857006EFC7:Frequently Asked Questions:6950652388537987015",
     "0B20B3F2EE78FFB5:immersiveengineering:rs_engineering:801838589636313013",
     "07ABF96BA0FFD5BE:solarflux:sp_6:552809619940955582",
     "61E14F41995942B4:projecte:white_alchemical_bag:7053005634603139764",
@@ -630,7 +627,6 @@
   "locations_by_region": {
     "Overworld": [
       "3EE16F0264052C50:Getting Started:4531024756170107984",
-      "4632C8C4F1622D5D:Into the End:5058326079679376733",
       "0366E4C57024B5E1:exdeorum:wooden_hammer:245134766379415009",
       "52558E9A9B255F2C:Alloy Kiln:5932804878809521964",
       "0D002DB1FBB8EFA3:farmingforblockheads:market:936798964948725667",
@@ -644,7 +640,7 @@
       "3480CD4B028D3084:exdeorum:diamond_hammer:3783249409040265348",
       "2386929E75F58990:minecraft:iron_pickaxe:2559894647488219536",
       "11B0D33506A1E4B7:Mechanical Hammer:1274750919243850935",
-      "423FCA2A7EF09109:Mechanical Sieve: 4773756413903147273",
+      "423FCA2A7EF09109:Mechanical Sieve:4773756413903147273",
       "49117C982012A5F6:compacter:compacter:5265126432187786742",
       "2EAEA784ACD625B6:cobblefordays:tier_2:3363810159969576374",
       "3105EE93AE0C62BF:cobblefordays:tier_3:3532491800789672639",
@@ -665,7 +661,7 @@
       "4BE855C08DE7BDC4:mob_grinding_utils:fan:5469716032944324036",
       "252FF7E709D75DBB:mob_grinding_utils:spikes:2679632874983349691",
       "09EAF3F7ABE5840E:cookingforblockheads:recipe_book:714651735958062094",
-      "42E5E12B9230AD31:cookingforblockheads: crafting_book:4820506553422490929",
+      "42E5E12B9230AD31:cookingforblockheads:crafting_book:4820506553422490929",
       "37774FFF19A446DF:cookingforblockheads:no_filter_edition:3996751151380055775",
       "64593A765B84CBFE:Build a Kitchen:7230874956736023550",
       "20B034D16EE93E07:Pam's Kitchen Tools:2355440679228358151",
@@ -735,7 +731,6 @@
       "77F0DF050A474878:Into the Twilight Forest:8642652897664256120",
       "3C93642728A0CAAA:Into the Undergarden:4364942583200271018",
       "403922E054130670:Into the Nether:4627768438978446960",
-      "4632C8C4F1622D5D:Into the End: 5058326079679376733",
       "1759B24EE5751EF7:Into the Mining Dimensions:1682571987726442231",
       "0754204BD1B84C6E:chunkloaders:basic_chunk_loader:528082566322343022",
       "1C49D56AD66A9A18:chunkloaders:advanced_chunk_loader:2038394961202420248",
@@ -968,6 +963,7 @@
       "1A3FA59451D43379:Controller:1891412424965501817",
       "274C14C7C62D48A8:Crafting:2831661113965103272",
       "4FBABE3D59B8E9B5:Drive:5745113445372062133",
+      "30E74CBC52DA2003:Wireless Access:3523869605168291843",
       "7B2BB48F9AB28BC6:1k Storage:8875386019532409798",
       "357543CD8A5D9DB6:4k Storage:3852059606354075062",
       "080262166E7887C3:16k Storage:577131550739040195",
@@ -1067,7 +1063,7 @@
       "6B30912D3790F068:mysticalagriculture:nitro_crystal_seeds:7723832984332202088",
       "29E40CD5EF7495FB:mysticalagriculture:nether_star_seeds:3018551763230037499",
       "304C3DA255E8BEA1:enderio:basic_capacitor:3480224379485863585",
-      "2AFC300B86665BAB:enderio: double_layer_capacitor:3097403469781687211",
+      "2AFC300B86665BAB:enderio:double_layer_capacitor:3097403469781687211",
       "62DE39B1BEF752BA:enderio:octadic_capacitor:7124195096122577594",
       "4BB8FBE275D2AE7F:Pipez:5456387898617278079",
       "599D753764477C22:Conduit Upgrades:6457446321485216802",
@@ -1239,6 +1235,9 @@
       "2614ECA52DB256A6:Wireless Crafting:2744078267155895974",
       "1F0C090AFA116B94:Universal Wireless:2237173057646062484"
     ],
+    "The Aether and The Nether": [
+      "4632C8C4F1622D5D:Into the End:5058326079679376733"
+    ],
     "The Nether and venus": [
       "3FC496674B2D2961:projecte:rm_sword:4594962890211797345",
       "721A33A024056D36:projecte:rm_katar:8221940832610381110",
@@ -1253,8 +1252,7 @@
       "5B1AD78B32132907:projecte:condenser_mk1:6564796399686461703",
       "2CD626E3DA24914E:projecte:condenser_mk2:3230812542744170830",
       "60331AC07AD1EBF5:projecte:transmutation_tablet:6931913665449946101",
-      "46DCFABCE6CA89BC:projectexpansion:transmutation_interface:5106231766764128700",
-      ""
+      "46DCFABCE6CA89BC:projectexpansion:transmutation_interface:5106231766764128700"
     ],
     "The End and venus": [
       "18E8E67F431E99E4:Simple Achievements:1794937885768456676"

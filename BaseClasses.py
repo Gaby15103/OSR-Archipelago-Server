@@ -1297,6 +1297,9 @@ class Location:
     def can_reach(self, state: CollectionState) -> bool:
         # Region.can_reach is just a cache lookup, so placing it first for faster abort on average
         assert self.parent_region, f"called can_reach on a Location \"{self}\" with no parent_region"
+        parent_reachable = self.parent_region.can_reach(state)
+        if not parent_reachable:
+            print(f"Parent region {self.parent_region} reachable: {parent_reachable}")
         return self.parent_region.can_reach(state) and self.access_rule(state)
 
     def place_locked_item(self, item: Item):

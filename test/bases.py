@@ -297,6 +297,10 @@ class WorldTestBase(unittest.TestCase):
             for location in self.multiworld.get_locations():
                 with self.subTest("Location should be reached", location=location.name):
                     reachable = location.can_reach(state)
+                    state = self.multiworld.get_all_state(False)
+                    if location.name == "035D7EEE54AED6E1:projecte:transmutation_table:242489517035935457":
+                        print("Region reachable:", location.parent_region.can_reach(state))
+
                     self.assertTrue(reachable, f"{location.name} unreachable")
             with self.subTest("Beatable"):
                 self.multiworld.state = state

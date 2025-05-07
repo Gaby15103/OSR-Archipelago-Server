@@ -146,6 +146,7 @@ class MinecraftOsrWorld(World):
         #self.create_event("Nether Fortress", "Wither")
 
         # Shuffle the connections
+        # not implemented
         shuffle_structures(self)
 
     def create_items(self) -> None:
