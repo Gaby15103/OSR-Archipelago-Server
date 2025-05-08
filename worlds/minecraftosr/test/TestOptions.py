@@ -1,5 +1,5 @@
 from . import MCOSRTestBase
-from .. import Options
+from .. import OptionsOSR
 
 from BaseClasses import ItemClassification
 from ..Constants import region_info

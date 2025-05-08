@@ -9,7 +9,7 @@ from BaseClasses import Region, Entrance, Item, Tutorial, ItemClassification, Lo
 from worlds.AutoWorld import World, WebWorld
 
 from . import Constants
-from .Options import MinecraftOsrOptions
+from .OptionsOSR import MinecraftOsrOptions
 from .Structures import shuffle_structures
 from .ItemPool import build_item_pool, get_junk_item_names
 from .Rules import set_rules
