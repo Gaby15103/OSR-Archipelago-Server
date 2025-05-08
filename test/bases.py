@@ -83,11 +83,6 @@ class TestBase(unittest.TestCase):
                     with self.subTest(msg="Entrance reachable without required item", entrance=entrance,
                                       items=item_pool[0], missing_item=missing_item, entry=i):
                         state = self._get_items_partial(item_pool, missing_item)
-                        can_reach = self.multiworld.get_entrance(entrance, 1).can_reach(state)
-                        if can_reach:
-                            print(f"{missing_item} is NOT required for {entrance}")
-                        else:
-                            print(f"{missing_item} is required")
                         self.assertEqual(self.multiworld.get_entrance(entrance, 1).can_reach(state), False,
                                          f"failed {self.multiworld.get_entrance(entrance, 1)} with: {item_pool}")
 
