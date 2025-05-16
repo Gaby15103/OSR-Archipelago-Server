@@ -7,12 +7,18 @@ from typing import Dict, Any
 
 from BaseClasses import Region, Entrance, Item, Tutorial, ItemClassification, Location
 from worlds.AutoWorld import World, WebWorld
+from worlds.LauncherComponents import Component, components, SuffixIdentifier, icon_paths
 
 from . import Constants
-from .OptionsOSR import MinecraftOsrOptions
+from .Options import MinecraftOsrOptions
 from .Structures import shuffle_structures
 from .ItemPool import build_item_pool, get_junk_item_names
 from .Rules import set_rules
+from Utils import local_path
+
+icon_paths['mcosricon'] = local_path('data','mcosricon.png')
+components.append(Component('Minecraft Ozone Skyblock Reborn Client', 'MinecraftOSRClient', icon='mcosricon', cli=True,
+              file_identifier=SuffixIdentifier('.apmc')))
 
 client_version = 9
 

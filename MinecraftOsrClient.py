@@ -9,6 +9,8 @@ from subprocess import Popen
 from shutil import copyfile
 from time import strftime
 import logging
+import zipfile
+import settings
 
 import requests
 
@@ -34,13 +36,13 @@ def prompt_yes_no(prompt):
             print('Please respond with "y" or "n".')
 
 
-def find_ap_randomizer_jar(forge_dir):
+def find_osr_ap_randomizer_jar(forge_dir):
     """Create mods folder if needed; find AP randomizer jar; return None if not found."""
     mods_dir = os.path.join(forge_dir, 'mods')
     if os.path.isdir(mods_dir):
         for entry in os.scandir(mods_dir):
-            if entry.name.startswith("aprandomizer-0.1.2-shadow") and entry.name.endswith(".jar"):
-                logging.info(f"Found AP randomizer mod: {entry.name}")
+            if entry.name.startswith("osraprandomizer-0.1.0") and entry.name.endswith(".jar"):
+                logging.info(f"Found OSR AP randomizer mod: {entry.name}")
                 return entry.name
         return None
     else:
@@ -79,18 +81,18 @@ def read_apmc_file(apmc_file):
 
 def update_mod(forge_dir, url: str):
     """Check mod version, download new mod from GitHub releases page if needed. """
-    ap_randomizer = find_ap_randomizer_jar(forge_dir)
+    osr_ap_randomizer = find_osr_ap_randomizer_jar(forge_dir)
     os.path.basename(url)
-    if ap_randomizer is not None:
-        logging.info(f"Your current mod is {ap_randomizer}.")
+    if osr_ap_randomizer is not None:
+        logging.info(f"Your current mod is {osr_ap_randomizer}.")
     else:
         logging.info(f"You do not have the AP randomizer mod installed.")
 
-    if ap_randomizer != os.path.basename(url):
+    if osr_ap_randomizer != os.path.basename(url):
         logging.info(f"A new release of the Minecraft AP randomizer mod was found: "
                      f"{os.path.basename(url)}")
         if prompt_yes_no("Would you like to update?"):
-            old_ap_mod = os.path.join(forge_dir, 'mods', ap_randomizer) if ap_randomizer is not None else None
+            old_ap_mod = os.path.join(forge_dir, 'mods', osr_ap_randomizer) if osr_ap_randomizer is not None else None
             new_ap_mod = os.path.join(forge_dir, 'mods', os.path.basename(url))
             logging.info("Downloading AP randomizer mod. This may take a moment...")
             apmod_resp = requests.get(url)
@@ -197,6 +199,41 @@ def install_forge(directory: str, forge_version: str, java_version: str):
             install_process.wait()
             os.remove(forge_install_jar)
 
+def install_osr_server(directory: str, modpack_url: str):
+    """download and Ozone Skyblock Server"""
+
+    print(f"Downloading Ozone Skyblock Reborn server...")
+    resp = requests.get(modpack_url)
+    if resp.status_code == 200:  # OK
+        osr_server_zip = os.path.join(directory, "OSR Server - 1.14.1.zip")
+        if not os.path.exists(directory):
+            os.mkdir(directory)
+        with open(osr_server_zip, 'wb') as f:
+            f.write(resp.content)
+        with zipfile.ZipFile(osr_server_zip, 'r') as zip_ref:
+            # Find the common top-level folder (e.g., "Ozone Skyblock Reborn-1.14.1/")
+            top_level = os.path.commonprefix(zip_ref.namelist())
+            if top_level.endswith('/') or top_level.endswith('\\'):
+                top_level = top_level.rstrip('/\\')
+
+            for member in zip_ref.infolist():
+                # Skip the top-level folder name
+                member_path = member.filename
+
+                # Remove the top-level folder prefix
+                stripped_path = os.path.relpath(member_path, top_level)
+
+                if stripped_path == '.' or member.is_dir():
+                    continue  # Skip the top folder itself
+
+                # Build the target path
+                target_path = os.path.join(directory, stripped_path)
+                os.makedirs(os.path.dirname(target_path), exist_ok=True)
+
+                with zip_ref.open(member) as source, open(target_path, 'wb') as target:
+                    target.write(source.read())
+        print(f"Extraction complete.")
+        os.remove(osr_server_zip)
 
 def run_forge_server(forge_dir: str, java_version: str, heap_arg: str) -> Popen:
     """Run the Forge server."""
@@ -224,7 +261,7 @@ def run_forge_server(forge_dir: str, java_version: str, heap_arg: str) -> Popen:
 
 
 def get_minecraft_versions(version, release_channel="release"):
-    version_file_endpoint = "https://raw.githubusercontent.com/KonoTyran/Minecraft_AP_Randomizer/master/versions/minecraft_versions.json"
+    version_file_endpoint = "https://raw.githubusercontent.com/Gaby15103/OSR-Archipelago-Client/master/versions/minecraft_versions.json"
     resp = requests.get(version_file_endpoint)
     local = False
     if resp.status_code == 200:  # OK
@@ -286,7 +323,7 @@ if __name__ == '__main__':
     os.chdir(os.path.abspath(os.path.dirname(sys.argv[0])))
 
     options = Utils.get_options()
-    channel = args.channel or options["minecraft_options"]["release_channel"]
+    channel = args.channel or options["minecraftosr_options"]["release_channel"]
     apmc_data = None
     data_version = args.data_version or None
 
@@ -299,9 +336,10 @@ if __name__ == '__main__':
 
     versions = get_minecraft_versions(data_version, channel)
 
-    forge_dir = options["minecraft_options"]["forge_directory"]
-    max_heap = options["minecraft_options"]["max_heap_size"]
+    forge_dir = options["minecraftosr_options"]["forge_directory"]
+    max_heap = options["minecraftosr_options"]["max_heap_size"]
     forge_version = args.forge or versions["forge"]
+    modpack_url = versions["modpack_url"]
     java_version = args.java or versions["java"]
     mod_url = versions["url"]
     java_dir = find_jdk_dir(java_version)
@@ -329,15 +367,14 @@ if __name__ == '__main__':
                 raise NotADirectoryError(f"Path {java_dir} does not exist or could not be accessed.")
 
     if not is_correct_forge(forge_dir):
-        if prompt_yes_no(f"Did not find forge version {forge_version} download and install it now?"):
-            install_forge(forge_dir, forge_version, java_version)
-        if not os.path.isdir(forge_dir):
-            raise NotADirectoryError(f"Path {forge_dir} does not exist or could not be accessed.")
+        if prompt_yes_no(f"Did not find the Ozone Skyblock Reborn server download and install it now?"):
+            install_osr_server(forge_dir, modpack_url)
+
 
     if not max_heap_re.match(max_heap):
         raise Exception(f"Max heap size {max_heap} in incorrect format. Use a number followed by M or G, e.g. 512M or 2G.")
 
-    #update_mod(forge_dir, mod_url)
+    update_mod(forge_dir, mod_url)
     replace_apmc_files(forge_dir, apmc_file)
     check_eula(forge_dir)
     server_process = run_forge_server(forge_dir, java_version, max_heap)
